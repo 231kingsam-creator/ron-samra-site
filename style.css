@@ -2372,36 +2372,43 @@ html.a11y-text-3 {
     display: none;
   }
 
-  .nav-hamburger {
-    display: flex;
-  }
-
   /* Minimal Mobile Header */
   nav#main-nav {
-    padding: 0 1.5rem !important;
+    padding: 0 1.2rem !important;
     justify-content: space-between !important;
+    flex-direction: row-reverse !important;
+    background: transparent !important;
+    box-shadow: none !important;
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    height: 70px;
+  }
+
+  .nav-logo {
+    order: 1;
   }
 
   .nav-logo img {
-    max-height: 38px !important;
+    max-height: 36px !important;
+    opacity: 0.92;
   }
 
-  /* Global Mobile Typography & Spacing */
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-weight: 300 !important;
-    letter-spacing: 0.02em;
+  .nav-logo-text {
+    display: none;
   }
 
-  p {
-    font-weight: 300 !important;
+  .nav-hamburger {
+    order: 2;
   }
 
-  /* ══ MOBILE HERO REDESIGN ══ */
+  .nav-hamburger span {
+    background-color: #fff !important;
+  }
+
+  /* ══ MOBILE HERO — PREMIUM WELLNESS ══ */
   .desktop-hero-content {
     display: none !important;
   }
@@ -2417,7 +2424,7 @@ html.a11y-text-3 {
     background: #0a0a0a !important;
   }
 
-  /* ── Animated GIF Background ── */
+  /* ── Animated Background ── */
   .mobile-hero-video {
     position: absolute;
     top: 0;
@@ -2444,7 +2451,7 @@ html.a11y-text-3 {
     z-index: 10;
   }
 
-  /* ── Dark Overlay ── */
+  /* ── Warm Dark Overlay ── */
   .mobile-hero-overlay {
     display: block !important;
     position: absolute;
@@ -2453,16 +2460,16 @@ html.a11y-text-3 {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-      to bottom,
-      rgba(0, 0, 0, 0.3) 0%,
-      rgba(0, 0, 0, 0.42) 50%,
-      rgba(0, 0, 0, 0.55) 100%
+      170deg,
+      rgba(15, 12, 10, 0.25) 0%,
+      rgba(10, 8, 6, 0.45) 50%,
+      rgba(5, 4, 3, 0.60) 100%
     );
     z-index: 1;
     pointer-events: none;
   }
 
-  /* ── Glass Content Card ── */
+  /* ── Hero Content — No Card, Open Air ── */
   .hero-content {
     position: relative;
     z-index: 2;
@@ -2471,116 +2478,132 @@ html.a11y-text-3 {
     flex-direction: column;
     align-items: center;
     gap: 0;
-
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    background: rgba(255, 255, 255, 0.06);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-    border-radius: 28px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
-    padding: 2.5rem 1.8rem 2rem;
-    width: min(90%, 400px);
+    padding: 0 2rem;
+    width: 100%;
+    max-width: 380px;
     margin: 0 auto;
+
+    /* No glass card */
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+    background: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
 
     /* Entry Animation */
     opacity: 0;
-    animation: heroFadeUp 1s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation: heroFadeUp 1.2s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   @keyframes heroFadeUp {
     0% {
       opacity: 0;
-      transform: translateY(25px) scale(0.97);
+      transform: translateY(30px);
     }
     100% {
       opacity: 1;
-      transform: translateY(0) scale(1);
+      transform: translateY(0);
     }
   }
 
-  /* ── Fix&Flow Title ── */
+  /* ── Brand Name ── */
   .mh-headline {
     font-family: 'Heebo', sans-serif;
-    font-size: 3.6rem;
-    font-weight: 300;
-    letter-spacing: 0.15em;
+    font-size: 3.2rem;
+    font-weight: 200;
+    letter-spacing: 0.18em;
     line-height: 1;
-    margin: 0 0 0.6rem;
+    margin: 0 0 0.3rem;
     color: #ffffff;
-    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
   }
 
-  /* ── Tagline: איזון. ריפוי. תנועה. ── */
-  .mh-tagline {
-    font-size: 1.35rem;
+  /* ── רון סמרה ── */
+  .mh-name {
+    font-size: 1.1rem;
     font-weight: 300;
-    letter-spacing: 0.25em;
-    color: rgba(255, 255, 255, 0.75);
-    margin: 0 0 1.5rem;
-    text-transform: none;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    letter-spacing: 0.12em;
+    color: rgba(255, 255, 255, 0.65);
+    margin: 0 0 1.6rem;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
   }
 
-  /* ── Description ── */
-  .mh-desc {
+  /* ── Thin Divider Line ── */
+  .mh-divider {
+    width: 40px;
+    height: 1px;
+    background: rgba(255, 255, 255, 0.3);
+    margin: 0 auto 1.6rem;
+  }
+
+  /* ── Tagline ── */
+  .mh-tagline {
     font-size: 1.05rem;
-    font-weight: 400;
-    line-height: 1.7;
+    font-weight: 300;
+    letter-spacing: 0.2em;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 1.2rem;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
+  }
+
+  /* ── Supporting Text ── */
+  .mh-desc {
+    font-size: 0.95rem;
+    font-weight: 300;
+    line-height: 1.8;
     max-width: 300px;
-    margin: 0 0 1.8rem;
-    color: rgba(255, 255, 255, 0.88);
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    margin: 0 0 2.4rem;
+    color: rgba(255, 255, 255, 0.68);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
   }
 
   .mh-sub {
     display: none;
   }
 
-  /* ── CTA Button with Glow ── */
+  /* ── Premium CTA Button ── */
   .mh-btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
-    max-width: 280px;
-    background: rgba(255, 255, 255, 0.18);
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.35);
-    color: #ffffff;
-    padding: 16px 24px;
-    border-radius: 100px;
-    font-size: 1.15rem;
-    font-weight: 600;
-    letter-spacing: 0.04em;
+    padding: 14px 36px;
+    border-radius: 50px;
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.06em;
     text-decoration: none;
-    transition: all 0.35s ease;
-    box-shadow:
-      0 4px 18px rgba(255, 255, 255, 0.12),
-      0 0 30px rgba(255, 255, 255, 0.06);
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
-    animation: ctaGlow 3s ease-in-out infinite;
+    transition: all 0.4s ease;
     margin-top: 0;
+    width: auto;
+    max-width: none;
+
+    /* Warm brand tone */
+    background: rgba(193, 154, 107, 0.85);
+    border: 1px solid rgba(193, 154, 107, 0.5);
+    color: #ffffff;
+    box-shadow: 0 4px 20px rgba(193, 154, 107, 0.25);
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
+
+    animation: ctaPulse 4s ease-in-out infinite;
   }
 
-  @keyframes ctaGlow {
+  @keyframes ctaPulse {
     0%, 100% {
-      box-shadow:
-        0 4px 18px rgba(255, 255, 255, 0.12),
-        0 0 30px rgba(255, 255, 255, 0.06);
+      box-shadow: 0 4px 20px rgba(193, 154, 107, 0.25);
     }
     50% {
-      box-shadow:
-        0 4px 22px rgba(255, 255, 255, 0.22),
-        0 0 40px rgba(255, 255, 255, 0.10);
+      box-shadow: 0 4px 28px rgba(193, 154, 107, 0.40);
     }
   }
 
   .mh-btn:hover,
   .mh-btn:active {
-    background: rgba(255, 255, 255, 0.3);
-    box-shadow: 0 6px 28px rgba(255, 255, 255, 0.25);
-    transform: translateY(-2px);
+    background: rgba(193, 154, 107, 1);
+    box-shadow: 0 6px 30px rgba(193, 154, 107, 0.45);
+    transform: translateY(-1px);
   }
 
   /* ══ MOBILE INTRO & CONTACT STRIP ══ */
