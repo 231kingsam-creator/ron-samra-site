@@ -259,6 +259,14 @@ nav.scrolled {
   width: auto;
 }
 
+.nav-logo-text {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--ink, #1a1a1a);
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 .nav-brand-wrap {
   display: flex;
   flex-direction: column;
