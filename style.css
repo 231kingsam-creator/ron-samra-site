@@ -2404,13 +2404,21 @@ html.a11y-text-3 {
     display: flex;
     align-items: center;
     justify-content: center;
-    background-color: transparent !important;
-    background-image: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0.5),
-        rgba(0, 0, 0, 0.6)), url("images/clinic/hero.jpg") !important;
-    background-size: cover !important;
-    background-position: center !important;
-    background-repeat: no-repeat !important;
+    position: relative;
+    overflow: hidden;
+    background: #0a0a0a !important;
+  }
+
+  /* ── Animated GIF Background ── */
+  .mobile-hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 0;
+    pointer-events: none;
   }
 
   .mobile-hero-wrapper {
@@ -2423,19 +2431,30 @@ html.a11y-text-3 {
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 1.5rem;
+    padding: 0;
     text-align: center;
     z-index: 10;
   }
 
-  .mobile-hero-bg {
-    display: none !important;
-  }
-
+  /* ── Dark Overlay ── */
   .mobile-hero-overlay {
-    display: none !important;
+    display: block !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0.3) 0%,
+      rgba(0, 0, 0, 0.42) 50%,
+      rgba(0, 0, 0, 0.55) 100%
+    );
+    z-index: 1;
+    pointer-events: none;
   }
 
+  /* ── Glass Content Card ── */
   .hero-content {
     position: relative;
     z-index: 2;
@@ -2443,95 +2462,116 @@ html.a11y-text-3 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 1.8rem;
+    gap: 0;
 
-    backdrop-filter: blur(14px);
-    -webkit-backdrop-filter: blur(14px);
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.14);
-    border-radius: 24px;
-    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.22);
-    padding: 1.6rem 1.2rem;
-    width: min(92%, 420px);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 28px;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+    padding: 2.5rem 1.8rem 2rem;
+    width: min(90%, 400px);
     margin: 0 auto;
-    letter-spacing: 0.05em;
 
-    /* Elegant Entry Animation */
+    /* Entry Animation */
     opacity: 0;
-    animation: heroFadeUp 1s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
+    animation: heroFadeUp 1s 0.2s cubic-bezier(0.2, 0.8, 0.2, 1) forwards;
   }
 
   @keyframes heroFadeUp {
     0% {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(25px) scale(0.97);
     }
-
     100% {
       opacity: 1;
-      transform: translateY(0);
+      transform: translateY(0) scale(1);
     }
   }
 
+  /* ── Fix&Flow Title ── */
   .mh-headline {
     font-family: 'Heebo', sans-serif;
-    font-size: 4rem;
-    font-weight: 400;
-    letter-spacing: 0.18em;
+    font-size: 3.6rem;
+    font-weight: 300;
+    letter-spacing: 0.15em;
     line-height: 1;
-    margin: 0;
-    margin-right: -0.1em;
+    margin: 0 0 0.6rem;
     color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.5);
+  }
+
+  /* ── Tagline: איזון. ריפוי. תנועה. ── */
+  .mh-tagline {
+    font-size: 1.35rem;
+    font-weight: 300;
+    letter-spacing: 0.25em;
+    color: rgba(255, 255, 255, 0.75);
+    margin: 0 0 1.5rem;
+    text-transform: none;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+  }
+
+  /* ── Description ── */
+  .mh-desc {
+    font-size: 1.05rem;
+    font-weight: 400;
+    line-height: 1.7;
+    max-width: 300px;
+    margin: 0 0 1.8rem;
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
   }
 
   .mh-sub {
-    font-size: 2.4rem;
-    font-weight: 700;
-    letter-spacing: 0.06em;
-    line-height: 1.3;
-    margin: 0;
-    color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    display: none;
   }
 
-  .mh-desc {
-    font-size: 1.2rem;
-    font-weight: 500;
-    line-height: 1.6;
-    max-width: 320px;
-    margin: 0;
-    margin-top: 1rem;
-    color: #ffffff;
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  }
-
+  /* ── CTA Button with Glow ── */
   .mh-btn {
-    margin-top: 1.8rem;
     display: inline-flex;
     align-items: center;
     justify-content: center;
     width: 100%;
-    max-width: 320px;
-    background: rgba(255, 255, 255, 0.25);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255, 255, 255, 0.45);
+    max-width: 280px;
+    background: rgba(255, 255, 255, 0.18);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.35);
     color: #ffffff;
-    padding: 17px 24px;
+    padding: 16px 24px;
     border-radius: 100px;
-    font-size: 1.3rem;
+    font-size: 1.15rem;
     font-weight: 600;
-    letter-spacing: 0.03em;
+    letter-spacing: 0.04em;
     text-decoration: none;
     transition: all 0.35s ease;
-    box-shadow: 0 6px 20px rgba(255, 255, 255, 0.18);
-    text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    box-shadow:
+      0 4px 18px rgba(255, 255, 255, 0.12),
+      0 0 30px rgba(255, 255, 255, 0.06);
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.4);
+    animation: ctaGlow 3s ease-in-out infinite;
+    margin-top: 0;
   }
 
-  .mh-btn:hover {
-    background: rgba(255, 255, 255, 0.35);
-    box-shadow: 0 8px 24px rgba(255, 255, 255, 0.25);
+  @keyframes ctaGlow {
+    0%, 100% {
+      box-shadow:
+        0 4px 18px rgba(255, 255, 255, 0.12),
+        0 0 30px rgba(255, 255, 255, 0.06);
+    }
+    50% {
+      box-shadow:
+        0 4px 22px rgba(255, 255, 255, 0.22),
+        0 0 40px rgba(255, 255, 255, 0.10);
+    }
+  }
+
+  .mh-btn:hover,
+  .mh-btn:active {
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 6px 28px rgba(255, 255, 255, 0.25);
     transform: translateY(-2px);
   }
 
