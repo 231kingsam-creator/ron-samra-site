@@ -2406,8 +2406,8 @@ html.a11y-text-3 {
     justify-content: center;
     background-color: transparent !important;
     background-image: linear-gradient(to bottom,
-        rgba(0, 0, 0, 0.45),
-        rgba(0, 0, 0, 0.6)), url("images/hero-mobile.jpg") !important;
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.6)), url("images/clinic/hero.jpg") !important;
     background-size: cover !important;
     background-position: center !important;
     background-repeat: no-repeat !important;

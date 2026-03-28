@@ -1,0 +1,56 @@
+[
+  {
+    "id": "headache",
+    "slug": "article-headache",
+    "title": "כל מה שרצית לדעת על כאב ראש",
+    "excerpt": "מסתובבים כבר כמה ימים עם כאב ראש מטריד שלא נותן מנוח? גלו איך הרפואה הסינית מבינה ומטפלת בכאבי ראש.",
+    "category": "כאב וניהולו",
+    "image": "images/articles/article-headache.png",
+    "url": "article-headache.html"
+  },
+  {
+    "id": "sleep",
+    "slug": "article-sleep",
+    "title": "למה יש לנו בעיות שינה?",
+    "excerpt": "לא מצליחים להירדם? מתעוררים באמצע הלילה? שליש מחיינו עוברים בשינה — איכות השינה משפיעה על הכל.",
+    "category": "שינה ומנוחה",
+    "image": "images/articles/article-sleep.png",
+    "url": "article-sleep.html"
+  },
+  {
+    "id": "allergies",
+    "slug": "article-allergies",
+    "title": "לנצח את האלרגיה",
+    "excerpt": "התחיל האביב? נזלת, עיניים גרדניות, עטיסות? מעל 20% מהאוכלוסייה סובלים — ויש מה לעשות.",
+    "category": "אלרגיות ומערכת החיסון",
+    "image": "images/articles/article-allergies.png",
+    "url": "article-allergies.html"
+  },
+  {
+    "id": "sweating",
+    "slug": "article-sweating",
+    "title": "סובלים מהזעת יתר?",
+    "excerpt": "הזעת יתר משפיעה על איכות החיים ועל הביטחון העצמי. הרפואה הסינית מציעה פתרון טבעי ויעיל.",
+    "category": "בריאות כללית",
+    "image": "images/articles/article-sweating.png",
+    "url": "article-sweating.html"
+  },
+  {
+    "id": "fertility",
+    "slug": "article-fertility",
+    "title": "רפואה סינית ופוריות האישה",
+    "excerpt": "שילוב דיקור סיני בטיפולי פוריות זוכה לתמיכה מחקרית רחבה. גלו כיצד הטיפול משפר את סיכויי ההתעברות.",
+    "category": "פוריות ובריאות האישה",
+    "image": "images/articles/article-fertility.png",
+    "url": "article-fertility.html"
+  },
+  {
+    "id": "gynecology",
+    "slug": "article-gynecology",
+    "title": "בעיות גינקולוגיות ורפואה סינית",
+    "excerpt": "יותר ויותר נשים פונות לרפואה סינית לטיפול בבעיות גינקולוגיות. גישה הוליסטית ומדויקת לבריאות האישה.",
+    "category": "פוריות ובריאות האישה",
+    "image": "images/articles/article-gynecology.png",
+    "url": "article-gynecology.html"
+  }
+]
