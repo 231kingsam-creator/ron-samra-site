@@ -2650,14 +2650,14 @@ html.a11y-text-3 {
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-end;
+    justify-content: center;
     height: 100vh;
     height: 100dvh;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0 0 env(safe-area-inset-bottom, 0);
+    padding: 0;
     text-align: center;
     z-index: 10;
   }
@@ -2672,16 +2672,16 @@ html.a11y-text-3 {
     height: 100%;
     background: linear-gradient(
       180deg,
-      rgba(10, 8, 6, 0.06) 0%,
-      rgba(10, 8, 6, 0.18) 30%,
-      rgba(5, 4, 3, 0.55) 65%,
-      rgba(2, 2, 2, 0.82) 100%
+      rgba(10, 8, 6, 0.12) 0%,
+      rgba(10, 8, 6, 0.28) 35%,
+      rgba(5, 4, 3, 0.6) 65%,
+      rgba(2, 2, 2, 0.85) 100%
     );
     z-index: 1;
     pointer-events: none;
   }
 
-  /* ── Hero content — bottom-anchored, breathable ── */
+  /* ── Hero content — centered, breathable ── */
   .hero-content {
     position: relative;
     z-index: 2;
@@ -2690,9 +2690,9 @@ html.a11y-text-3 {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    padding: 0 1.8rem 4.5rem;
+    padding: 0 1.6rem;
     width: 100%;
-    max-width: 480px;
+    max-width: 440px;
     margin: 0 auto;
 
     backdrop-filter: none;
@@ -2709,7 +2709,7 @@ html.a11y-text-3 {
   @keyframes heroFadeUp {
     0% {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(24px);
     }
     100% {
       opacity: 1;
@@ -2717,32 +2717,55 @@ html.a11y-text-3 {
     }
   }
 
-  /* ── Headline — emotional, max 2–3 lines ── */
+  /* ── Centered Logo ── */
+  .mh-logo {
+    width: 56px;
+    height: 56px;
+    object-fit: contain;
+    border-radius: 50%;
+    margin-bottom: 1.6rem;
+    filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
+  }
+
+  /* ── Headline — big, readable, emotional ── */
   .mh-headline {
     font-family: 'Heebo', sans-serif;
-    font-size: 2.2rem;
+    font-size: 2.5rem;
     font-weight: 700;
-    letter-spacing: -0.015em;
-    line-height: 1.3;
-    margin: 0 0 1.2rem;
+    letter-spacing: -0.02em;
+    line-height: 1.28;
+    margin: 0 0 1.6rem;
     color: #ffffff;
-    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
   }
 
-  /* ── Subheadline ── */
-  .mh-sub {
+  /* ── Two short supporting lines ── */
+  .mh-line1,
+  .mh-line2 {
     display: block;
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     font-weight: 300;
     letter-spacing: 0.01em;
-    line-height: 1.7;
-    color: rgba(255, 255, 255, 0.85);
-    margin: 0 0 2.2rem;
-    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
-    max-width: 360px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.88);
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
+    margin: 0;
   }
 
-  /* ── CTA inline logo icon ── */
+  .mh-line1 {
+    margin-bottom: 0.4rem;
+  }
+
+  .mh-line2 {
+    margin-bottom: 2.4rem;
+  }
+
+  /* ── Keep old .mh-sub hidden if still referenced ── */
+  .mh-sub {
+    display: none;
+  }
+
+  /* ── CTA inline logo icon (used elsewhere) ── */
   .cta-icon {
     width: 24px;
     height: 24px;
@@ -2753,22 +2776,22 @@ html.a11y-text-3 {
     margin-inline-end: 0.3rem;
   }
 
-  /* ── WhatsApp CTA — big thumb-friendly ── */
+  /* ── WhatsApp CTA — single, big, clean ── */
   .mh-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 16px 28px;
+    padding: 18px 32px;
     border-radius: 60px;
-    font-size: 1.08rem;
+    font-size: 1.15rem;
     font-weight: 600;
     letter-spacing: 0.01em;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     width: 100%;
-    max-width: 360px;
-    min-height: var(--m-cta-height);
+    max-width: 320px;
+    min-height: 56px;
 
     background: #25D366;
     border: none;
@@ -2795,14 +2818,14 @@ html.a11y-text-3 {
     transform: translateY(-2px);
   }
 
-  /* ── Trust line under CTA ── */
+  /* ── Trust micro-text under CTA ── */
   .mh-trust-line {
     display: block;
-    margin-top: 1.4rem;
-    font-size: 0.88rem;
+    margin-top: 1.2rem;
+    font-size: 0.85rem;
     font-weight: 300;
     letter-spacing: 0.04em;
-    color: rgba(255, 255, 255, 0.65);
+    color: rgba(255, 255, 255, 0.6);
     text-align: center;
     line-height: 1.7;
   }
@@ -3574,23 +3597,28 @@ html.a11y-text-3 {
   }
 
   .mh-headline {
-    font-size: 1.9rem;
-    line-height: 1.32;
+    font-size: 2.1rem;
+    line-height: 1.3;
   }
 
-  .mh-sub {
-    font-size: 1.02rem;
-    max-width: 300px;
+  .mh-line1,
+  .mh-line2 {
+    font-size: 1.05rem;
+  }
+
+  .mh-logo {
+    width: 48px;
+    height: 48px;
   }
 
   .mh-btn {
     max-width: 100%;
-    font-size: 1rem;
-    padding: 14px 24px;
+    font-size: 1.05rem;
+    padding: 16px 28px;
   }
 
   .hero-content {
-    padding: 0 1.4rem 3.5rem;
+    padding: 0 1.2rem;
   }
 
   .section-head h2 {
