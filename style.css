@@ -2587,13 +2587,21 @@ html.a11y-text-3 {
 
   .nav-logo-mobile {
     display: block !important;
-    max-height: 40px !important;
+    max-height: 44px !important;
     width: auto !important;
-    opacity: 0.95;
+    opacity: 1;
+    background: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.15));
   }
 
   .nav-logo {
     order: unset;
+    display: flex;
+    align-items: center;
+    height: 100%;
   }
 
   .nav-logo-text {
