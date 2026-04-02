@@ -3539,65 +3539,117 @@ html.a11y-text-3 {
 
 
   /* ══════════════════════════════════════════
-     TESTIMONIALS — MOBILE STACKED CARDS
+     TESTIMONIALS — MOBILE SWIPEABLE CARDS
   ══════════════════════════════════════════ */
   .testimonials {
-    padding-top: var(--m-section-gap);
-    padding-bottom: var(--m-section-gap);
+    padding: 3rem 0 2.5rem;
+    overflow: hidden;
+  }
+
+  .testimonials .section-inner {
+    padding: 0;
   }
 
   .testimonials .section-head {
-    margin-bottom: 1.8rem;
+    margin-bottom: 2rem;
+    padding: 0 var(--m-side-pad);
+    text-align: center;
+  }
+
+  .testimonials .section-head h2 {
+    font-size: 1.9rem;
+    line-height: 1.28;
   }
 
   .testi-layout {
-    grid-template-columns: 1fr;
-    gap: 0;
+    display: block;
   }
 
   .testi-img-col {
     display: none;
   }
 
-  .tgrid {
-    gap: 1rem;
+  .testi-cards-col {
+    width: 100%;
   }
 
+  /* ── Horizontal swipe container ── */
+  .tgrid {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    gap: 1rem;
+    padding: 0 var(--m-side-pad) 1rem;
+    scrollbar-width: none;
+  }
+
+  .tgrid::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* ── Individual swipe card ── */
   .tcard {
-    padding: 1.5rem 1.4rem;
-    border-radius: var(--m-card-radius);
-    box-shadow: var(--m-card-shadow);
-    border: 1px solid rgba(240, 208, 204, 0.5);
-    transition: box-shadow 0.3s ease;
+    flex: 0 0 85%;
+    max-width: 85%;
+    scroll-snap-align: center;
+    padding: 2rem 1.6rem;
+    border-radius: 22px;
+    background: var(--white);
+    box-shadow: 0 2px 16px rgba(196, 122, 116, 0.08);
+    border: 1px solid rgba(240, 208, 204, 0.35);
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+    margin: 0;
   }
 
   .tcard:hover {
     transform: none;
-    box-shadow: var(--m-card-shadow-hover);
+    box-shadow: 0 4px 24px rgba(196, 122, 116, 0.12);
   }
 
-  .tcard p {
-    font-size: 1.06rem;
-    line-height: 1.85;
-  }
-
+  /* ── Stars ── */
   .tcard-stars {
-    font-size: 1.15rem;
+    font-size: 1.25rem;
     letter-spacing: 3px;
+    margin-bottom: 0.3rem;
   }
 
+  .tcard-header {
+    margin-bottom: 0.8rem;
+  }
+
+  .tcard-source {
+    font-size: 0.75rem;
+  }
+
+  /* ── Quote text — large, emotional ── */
+  .tcard p {
+    font-size: 1.2rem;
+    line-height: 1.85;
+    color: var(--text);
+    font-weight: 400;
+  }
+
+  /* ── Name ── */
   .tcard-name {
-    font-size: 0.88rem;
-    margin-top: 0.9rem;
+    font-size: 0.95rem;
+    margin-top: 1.2rem;
+    font-weight: 600;
+    color: var(--text-mid);
   }
 
+  /* ── Trust label ── */
   .testi-trust-label {
     font-size: 0.82rem;
     padding: 7px 18px;
   }
 
+  /* ── CTA row ── */
   .testi-cta-row {
     margin-top: 2rem;
+    padding: 0 var(--m-side-pad);
   }
 
   .btn-testi-cta {
