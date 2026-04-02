@@ -2742,6 +2742,17 @@ html.a11y-text-3 {
     max-width: 360px;
   }
 
+  /* ── CTA inline logo icon ── */
+  .cta-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    border-radius: 50%;
+    flex-shrink: 0;
+    vertical-align: middle;
+    margin-inline-end: 0.3rem;
+  }
+
   /* ── WhatsApp CTA — big thumb-friendly ── */
   .mh-btn {
     display: flex;
