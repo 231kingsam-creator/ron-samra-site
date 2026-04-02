@@ -760,6 +760,89 @@ nav.scrolled {
   line-height: 1.75;
 }
 
+/* Pain card extras — visible on mobile, hidden or subtle on desktop */
+.pain-card-intro {
+  font-size: 0.85rem;
+  color: var(--text-soft);
+  line-height: 1.75;
+}
+
+.pain-card-bullets {
+  display: none; /* Hidden on desktop for clean card look */
+}
+
+.pain-card-cta {
+  display: none; /* Hidden on desktop */
+}
+
+/* Trust line under hero CTA — desktop hidden */
+.mh-trust-line {
+  display: none;
+}
+
+/* ── WHY CHOOSE ME — DESKTOP ── */
+.why-choose {
+  padding: 8rem 2.5rem;
+  background: var(--warm);
+}
+
+.why-choose .section-head {
+  margin-bottom: 3rem;
+}
+
+.why-choose-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+  max-width: var(--max-w);
+  margin: 0 auto;
+}
+
+.wc-card {
+  display: flex;
+  align-items: center;
+  gap: 0.7rem;
+  background: var(--white);
+  border: 1px solid var(--blush-mid);
+  border-radius: var(--radius-md);
+  padding: 1.2rem;
+  transition: all 0.3s var(--ease);
+}
+
+.wc-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-pink);
+}
+
+.wc-check {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  min-width: 36px;
+  border-radius: 50%;
+  background: var(--blush-light);
+  color: var(--blush-deep);
+  font-size: 1rem;
+  font-weight: 700;
+  flex-shrink: 0;
+}
+
+.wc-card strong {
+  display: block;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.wc-card > div > span {
+  font-size: 0.75rem;
+  color: var(--text-soft);
+  line-height: 1.4;
+}
+
 /* ── CTA STRIP ── */
 .cta-strip {
   background: linear-gradient(135deg, var(--blush-deep) 0%, #d4908a 100%);
@@ -1035,6 +1118,27 @@ nav.scrolled {
   margin-bottom: 3.5rem;
 }
 
+/* Trust label */
+.testi-trust-label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background: var(--white);
+  border: 1px solid var(--blush-mid);
+  color: var(--text-mid);
+  font-size: 0.78rem;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 6px 16px;
+  border-radius: var(--radius-pill);
+  margin-bottom: 1.2rem;
+  box-shadow: 0 2px 8px rgba(196, 122, 116, 0.08);
+}
+
+.testi-trust-label svg {
+  flex-shrink: 0;
+}
+
 .testi-layout {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1067,8 +1171,9 @@ nav.scrolled {
   background: var(--white);
   border: 1px solid var(--blush-mid);
   border-radius: var(--radius-md);
-  padding: 1.6rem;
+  padding: 1.8rem;
   transition: all 0.3s var(--ease);
+  position: relative;
 }
 
 .tcard:hover {
@@ -1077,53 +1182,76 @@ nav.scrolled {
   border-color: var(--blush);
 }
 
+/* Card header: stars + source */
+.tcard-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.8rem;
+}
+
 .tcard-stars {
   color: var(--gold);
   font-size: 18px;
   letter-spacing: 2px;
-  margin-bottom: 0.8rem;
+}
+
+.tcard-source {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 0.68rem;
+  color: var(--text-soft);
+  letter-spacing: 0.03em;
+  font-weight: 500;
+  opacity: 0.7;
+}
+
+.tcard-source svg {
+  flex-shrink: 0;
 }
 
 .tcard p {
-  font-size: 0.88rem;
+  font-size: 0.9rem;
   color: var(--text-mid);
-  line-height: 1.75;
+  line-height: 1.8;
   font-style: italic;
 }
 
 .tcard-name {
-  margin-top: 0.9rem;
-  font-size: 0.78rem;
+  margin-top: 1rem;
+  font-size: 0.8rem;
   color: var(--blush-deep);
   font-weight: 600;
-  letter-spacing: 0.08em;
+  letter-spacing: 0.06em;
 }
 
-.t-google-row {
+/* CTA row */
+.testi-cta-row {
   display: flex;
   justify-content: center;
-  margin-top: 2.5rem;
+  margin-top: 3rem;
 }
 
-.btn-google {
+.btn-testi-cta {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  background: var(--white);
-  border: 1px solid var(--blush-mid);
-  color: var(--text-mid);
-  padding: 12px 28px;
-  border-radius: 100px;
-  font-size: 18px;
+  background: var(--blush-deep);
+  color: #fff;
+  padding: 14px 36px;
+  border-radius: var(--radius-pill);
+  font-size: 1rem;
   font-weight: 600;
-  transition: all 0.25s var(--ease);
-  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  letter-spacing: 0.02em;
+  transition: all 0.3s var(--ease);
+  box-shadow: 0 4px 20px rgba(196, 122, 116, 0.3);
 }
 
-.btn-google:hover {
-  border-color: var(--blush-deep);
-  color: var(--blush-deep);
-  transform: translateY(-2px);
+.btn-testi-cta:hover {
+  background: var(--blush-dark);
+  transform: translateY(-3px);
+  box-shadow: 0 8px 32px rgba(196, 122, 116, 0.4);
 }
 
 /* ── PROCESS ── */
@@ -1282,6 +1410,11 @@ nav.scrolled {
 
 .pricing .section-head {
   margin-bottom: 3.5rem;
+}
+
+/* Hidden on desktop, shown on mobile via media query */
+.pricing-soft-intro {
+  display: none;
 }
 
 .pricing-grid {
@@ -1693,6 +1826,39 @@ nav.scrolled {
   font-size: 0.78rem;
   color: var(--text-soft);
   margin-top: 3px;
+}
+
+/* ── LOCAL TRUST STRIP ── */
+.local-trust {
+  padding: 2.5rem 2.5rem;
+  background: var(--blush-light);
+  border-top: 1px solid var(--blush-mid);
+  border-bottom: 1px solid var(--blush-mid);
+}
+
+.local-trust-inner {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  flex-wrap: wrap;
+}
+
+.lt-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.lt-icon {
+  font-size: 1.3rem;
+  line-height: 1;
+}
+
+.lt-text {
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-mid);
+  letter-spacing: 0.02em;
 }
 
 /* ── DISCLAIMER ── */
@@ -2363,18 +2529,30 @@ html.a11y-text-3 {
 }
 
 @media (max-width: 768px) {
+
+  /* ══════════════════════════════════════════
+     MOBILE DESIGN TOKENS
+  ══════════════════════════════════════════ */
   :root {
     --nav-h: 60px;
+    --m-section-gap: 3.5rem;
+    --m-card-radius: 18px;
+    --m-card-shadow: 0 2px 16px rgba(196, 122, 116, 0.08);
+    --m-card-shadow-hover: 0 6px 28px rgba(196, 122, 116, 0.14);
+    --m-cta-height: 54px;
+    --m-side-pad: 1.4rem;
   }
 
+  /* ══════════════════════════════════════════
+     MOBILE NAVIGATION
+  ══════════════════════════════════════════ */
   .nav-links,
   .nav-cta {
     display: none;
   }
 
-  /* ── Mobile Nav: GIF logo LEFT, hamburger RIGHT ── */
   nav#main-nav {
-    padding: 0 1.4rem !important;
+    padding: 0 var(--m-side-pad) !important;
     justify-content: space-between !important;
     flex-direction: row !important;
     background: transparent !important;
@@ -2387,7 +2565,16 @@ html.a11y-text-3 {
     height: 70px;
   }
 
-  /* Show GIF logo, hide PNG logo on mobile */
+  nav#main-nav.scrolled {
+    background: rgba(253, 246, 244, 0.97) !important;
+    position: fixed !important;
+    box-shadow: 0 2px 16px rgba(196, 122, 116, 0.1) !important;
+  }
+
+  nav#main-nav.scrolled .nav-hamburger span {
+    background-color: var(--text) !important;
+  }
+
   .nav-logo-desktop {
     display: none !important;
   }
@@ -2416,7 +2603,10 @@ html.a11y-text-3 {
     background-color: #fff !important;
   }
 
-  /* ══ MOBILE HERO — BACKGROUND IMAGE ══ */
+
+  /* ══════════════════════════════════════════
+     MOBILE HERO — PREMIUM ULTRA-CLEAN
+  ══════════════════════════════════════════ */
   .desktop-hero-content {
     display: none !important;
   }
@@ -2424,6 +2614,7 @@ html.a11y-text-3 {
   .hero {
     padding: 0 !important;
     min-height: 100vh;
+    min-height: 100dvh;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -2431,13 +2622,13 @@ html.a11y-text-3 {
     overflow: hidden;
     background-image: url('images/hero-mobile.jpg') !important;
     background-size: cover !important;
-    background-position: center !important;
+    background-position: center top !important;
     background-repeat: no-repeat !important;
     background-color: #0a0a0a !important;
   }
 
-  /* Hide the old GIF img element if present */
-  .mobile-hero-video {
+  .hero::before,
+  .hero::after {
     display: none !important;
   }
 
@@ -2445,18 +2636,19 @@ html.a11y-text-3 {
     display: flex !important;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: flex-end;
     height: 100vh;
+    height: 100dvh;
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    padding: 0;
+    padding: 0 0 env(safe-area-inset-bottom, 0);
     text-align: center;
     z-index: 10;
   }
 
-  /* ── Warm Dark Overlay ── */
+  /* ── Cinematic gradient overlay ── */
   .mobile-hero-overlay {
     display: block !important;
     position: absolute;
@@ -2465,16 +2657,17 @@ html.a11y-text-3 {
     width: 100%;
     height: 100%;
     background: linear-gradient(
-      170deg,
-      rgba(15, 12, 10, 0.25) 0%,
-      rgba(10, 8, 6, 0.45) 50%,
-      rgba(5, 4, 3, 0.60) 100%
+      180deg,
+      rgba(10, 8, 6, 0.06) 0%,
+      rgba(10, 8, 6, 0.18) 30%,
+      rgba(5, 4, 3, 0.55) 65%,
+      rgba(2, 2, 2, 0.82) 100%
     );
     z-index: 1;
     pointer-events: none;
   }
 
-  /* ── Hero Content — No Card, Open Air ── */
+  /* ── Hero content — bottom-anchored, breathable ── */
   .hero-content {
     position: relative;
     z-index: 2;
@@ -2483,12 +2676,11 @@ html.a11y-text-3 {
     flex-direction: column;
     align-items: center;
     gap: 0;
-    padding: 0 2rem;
+    padding: 0 1.8rem 4.5rem;
     width: 100%;
-    max-width: 380px;
+    max-width: 480px;
     margin: 0 auto;
 
-    /* No glass card */
     backdrop-filter: none;
     -webkit-backdrop-filter: none;
     background: none;
@@ -2496,9 +2688,8 @@ html.a11y-text-3 {
     border-radius: 0;
     box-shadow: none;
 
-    /* Entry Animation */
     opacity: 0;
-    animation: heroFadeUp 1.2s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+    animation: heroFadeUp 1s 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }
 
   @keyframes heroFadeUp {
@@ -2512,219 +2703,744 @@ html.a11y-text-3 {
     }
   }
 
-  /* ── Brand Name ── */
+  /* ── Headline — emotional, max 2–3 lines ── */
   .mh-headline {
     font-family: 'Heebo', sans-serif;
-    font-size: 3.2rem;
-    font-weight: 200;
-    letter-spacing: 0.18em;
-    line-height: 1;
-    margin: 0 0 0.3rem;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: -0.01em;
+    line-height: 1.32;
+    margin: 0 0 1rem;
     color: #ffffff;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.4);
+    text-shadow: 0 2px 24px rgba(0, 0, 0, 0.45);
   }
 
-  /* ── רון סמרה ── */
-  .mh-name {
-    font-size: 1.1rem;
-    font-weight: 300;
-    letter-spacing: 0.12em;
-    color: rgba(255, 255, 255, 0.65);
-    margin: 0 0 1.6rem;
-    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-  }
-
-  /* ── Thin Divider Line ── */
-  .mh-divider {
-    width: 40px;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.3);
-    margin: 0 auto 1.6rem;
-  }
-
-  /* ── Tagline ── */
-  .mh-tagline {
-    font-size: 1.05rem;
-    font-weight: 300;
-    letter-spacing: 0.2em;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0 0 1.2rem;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.3);
-  }
-
-  /* ── Supporting Text ── */
-  .mh-desc {
-    font-size: 0.95rem;
-    font-weight: 300;
-    line-height: 1.8;
-    max-width: 300px;
-    margin: 0 0 2.4rem;
-    color: rgba(255, 255, 255, 0.68);
-    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
-  }
-
+  /* ── Subheadline ── */
   .mh-sub {
-    display: none;
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.01em;
+    line-height: 1.75;
+    color: rgba(255, 255, 255, 0.82);
+    margin: 0 0 2rem;
+    text-shadow: 0 1px 10px rgba(0, 0, 0, 0.3);
+    max-width: 360px;
   }
 
-  /* ── Premium CTA Button ── */
+  /* ── WhatsApp CTA — big thumb-friendly ── */
   .mh-btn {
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
-    padding: 14px 36px;
-    border-radius: 50px;
-    font-size: 1rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    gap: 0.5rem;
+    padding: 16px 28px;
+    border-radius: 60px;
+    font-size: 1.02rem;
+    font-weight: 600;
+    letter-spacing: 0.01em;
     text-decoration: none;
-    transition: all 0.4s ease;
-    margin-top: 0;
-    width: auto;
-    max-width: none;
+    transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
+    width: 100%;
+    max-width: 360px;
+    min-height: var(--m-cta-height);
 
-    /* Warm brand tone */
-    background: rgba(193, 154, 107, 0.85);
-    border: 1px solid rgba(193, 154, 107, 0.5);
+    background: #25D366;
+    border: none;
     color: #ffffff;
-    box-shadow: 0 4px 20px rgba(193, 154, 107, 0.25);
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
-    backdrop-filter: none;
-    -webkit-backdrop-filter: none;
-
-    animation: ctaPulse 4s ease-in-out infinite;
+    box-shadow:
+      0 6px 24px rgba(37, 211, 102, 0.35),
+      0 0 0 0 rgba(37, 211, 102, 0);
+    animation: ctaPulse 3s ease-in-out infinite;
   }
 
   @keyframes ctaPulse {
     0%, 100% {
-      box-shadow: 0 4px 20px rgba(193, 154, 107, 0.25);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35), 0 0 0 0 rgba(37, 211, 102, 0.15);
     }
     50% {
-      box-shadow: 0 4px 28px rgba(193, 154, 107, 0.40);
+      box-shadow: 0 6px 32px rgba(37, 211, 102, 0.5), 0 0 0 10px rgba(37, 211, 102, 0);
     }
   }
 
   .mh-btn:hover,
   .mh-btn:active {
-    background: rgba(193, 154, 107, 1);
-    box-shadow: 0 6px 30px rgba(193, 154, 107, 0.45);
-    transform: translateY(-1px);
+    background: #20bd5a;
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.5);
+    transform: translateY(-2px);
   }
 
-  /* ══ MOBILE INTRO & CONTACT STRIP ══ */
+  /* ── Trust line under CTA ── */
+  .mh-trust-line {
+    display: block;
+    margin-top: 1.2rem;
+    font-size: 0.8rem;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    color: rgba(255, 255, 255, 0.6);
+    text-align: center;
+    line-height: 1.6;
+  }
+
+
+  /* ══════════════════════════════════════════
+     GLOBAL MOBILE SECTION SPACING & TYPOGRAPHY
+  ══════════════════════════════════════════ */
   .marquee-wrap {
     display: none !important;
   }
 
-  .mobile-intro-section {
-    display: block !important;
-    background-color: var(--stone);
-    padding: 6rem 2rem;
-    text-align: center;
-  }
-
-  .mobile-intro-inner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-
-  .mobile-intro-inner h2 {
-    font-size: 2.2rem;
-    margin: 0;
-    color: var(--text);
-  }
-
-  .mobile-intro-inner h3 {
-    font-size: 1.6rem;
-    margin: 0;
-    color: var(--text-light);
-  }
-
-  .mobile-intro-inner p {
-    font-size: 1.1rem;
-    margin: 0;
-    color: var(--text);
-  }
-
+  .mobile-intro-section,
   .mobile-contact-strip {
-    display: flex !important;
-    justify-content: center;
-    gap: 1rem;
-    padding: 2.5rem 1.5rem;
-    background-color: var(--bg);
+    display: none !important;
   }
 
-  .mcs-btn {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    padding: 14px 24px;
-    border-radius: 100px;
-    font-size: 1rem;
-    text-decoration: none;
-    font-weight: 400;
-    flex: 1;
-    max-width: 180px;
-    transition: var(--trans);
+  /* Premium vertical rhythm for sections */
+  .pain,
+  .how,
+  .about,
+  .clinic,
+  .testimonials,
+  .process,
+  .faq,
+  .pricing,
+  .contact,
+  .why-choose {
+    padding: var(--m-section-gap) var(--m-side-pad);
   }
 
-  .mcs-wa {
-    background-color: #25D366;
-    color: white;
+  .section-inner {
+    padding: 0 0.2rem;
   }
 
-  .mcs-call {
-    background-color: var(--blush-deep);
-    color: white;
+  /* Section headings — larger, more readable Hebrew */
+  .section-head h2 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    line-height: 1.35;
+    letter-spacing: -0.01em;
   }
 
-  .mcs-icon {
-    font-size: 1.2rem;
+  .section-sub {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-top: 0.8rem;
+  }
+
+  .section-label {
+    font-size: 0.68rem;
+    letter-spacing: 0.18em;
+    margin-bottom: 0.5rem;
+  }
+
+  /* Clear section separators */
+  .pain,
+  .how,
+  .testimonials,
+  .process,
+  .faq,
+  .pricing {
+    border-bottom: 1px solid rgba(232, 180, 176, 0.2);
+  }
+
+
+  /* ══════════════════════════════════════════
+     PAIN / PROBLEM CARDS — MOBILE PREMIUM
+  ══════════════════════════════════════════ */
+  .pain {
+    padding-top: var(--m-section-gap);
+    padding-bottom: var(--m-section-gap);
+  }
+
+  .pain .section-head {
+    margin-bottom: 1.8rem;
   }
 
   .pain-grid {
     grid-template-columns: 1fr;
+    gap: 1rem;
+    margin-top: 1.5rem;
+  }
+
+  .pain-card {
+    padding: 1.6rem 1.4rem;
+    border-radius: var(--m-card-radius);
+    box-shadow: var(--m-card-shadow);
+    border: 1px solid rgba(240, 208, 204, 0.5);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .pain-card:hover {
+    transform: none;
+    box-shadow: var(--m-card-shadow-hover);
+  }
+
+  .pain-card::before {
+    display: none;
+  }
+
+  .pain-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.7rem;
+  }
+
+  .pain-card h4 {
+    font-size: 1.08rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+    color: var(--text);
+  }
+
+  .pain-card p,
+  .pain-card-intro {
+    font-size: 0.9rem;
+    color: var(--text-mid);
+    line-height: 1.75;
+    margin-bottom: 0.6rem;
+  }
+
+  /* Bullet points visible on mobile */
+  .pain-card-bullets {
+    list-style: none;
+    padding: 0;
+    margin: 0.6rem 0 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+  }
+
+  .pain-card-bullets li {
+    font-size: 0.85rem;
+    color: var(--text-mid);
+    line-height: 1.55;
+    padding-right: 1.1rem;
+    position: relative;
+  }
+
+  .pain-card-bullets li::before {
+    content: '·';
+    position: absolute;
+    right: 0;
+    color: var(--blush-deep);
+    font-weight: 700;
+    font-size: 1.2rem;
+    line-height: 1.3;
+  }
+
+  /* Small WhatsApp CTA per card */
+  .pain-card-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: var(--blush-deep);
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 100px;
+    background: var(--blush-light);
+    border: 1px solid var(--blush-mid);
+    transition: all 0.2s ease;
+    margin-top: 0.5rem;
+  }
+
+  .pain-card-cta:hover,
+  .pain-card-cta:active {
+    background: var(--blush-deep);
+    color: #fff;
+    border-color: var(--blush-deep);
+  }
+
+
+  /* ══════════════════════════════════════════
+     CTA STRIPS — MOBILE PREMIUM
+  ══════════════════════════════════════════ */
+  .cta-strip {
+    flex-direction: column;
+    text-align: center;
+    padding: 2.5rem var(--m-side-pad);
+    gap: 1.2rem;
+  }
+
+  .cta-strip-text {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 340px;
+    margin: 0 auto;
+  }
+
+  .btn-strip {
+    width: 100%;
+    max-width: 340px;
+    min-height: 52px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+    border-radius: 60px;
+    margin: 0 auto;
+  }
+
+
+  /* ══════════════════════════════════════════
+     HOW IT WORKS — 3 STACKED CARDS MOBILE
+  ══════════════════════════════════════════ */
+  .how {
+    padding-top: var(--m-section-gap);
+    padding-bottom: var(--m-section-gap);
+  }
+
+  .how .section-head {
+    margin-bottom: 1.8rem;
   }
 
   .how-grid {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .how-grid::before {
+    display: none;
+  }
+
+  .how-card {
+    background: var(--white);
+    border: 1px solid rgba(240, 208, 204, 0.5);
+    border-radius: var(--m-card-radius);
+    padding: 1.5rem 1.4rem;
+    text-align: right;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: var(--m-card-shadow);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .how-card:hover {
+    box-shadow: var(--m-card-shadow-hover);
+  }
+
+  .how-card:hover .how-num {
+    background: var(--blush-deep);
+    color: #fff;
+    border-color: var(--blush-deep);
+    transform: none;
+  }
+
+  .how-num {
+    width: 46px;
+    height: 46px;
+    min-width: 46px;
+    font-size: 1.05rem;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .how-card h4 {
+    font-size: 1.02rem;
+    font-weight: 600;
+    margin-bottom: 0.35rem;
+  }
+
+  .how-card p {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: var(--text-mid);
+  }
+
+
+  /* ══════════════════════════════════════════
+     WHY CHOOSE ME — MOBILE CHECKLIST
+  ══════════════════════════════════════════ */
+  .why-choose {
+    background: var(--warm);
+    padding: var(--m-section-gap) var(--m-side-pad);
+  }
+
+  .why-choose .section-head {
+    margin-bottom: 1.8rem;
+  }
+
+  .why-choose-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 0.7rem;
+  }
+
+  .wc-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--white);
+    border: 1px solid rgba(240, 208, 204, 0.5);
+    border-radius: 16px;
+    padding: 1.1rem 1.3rem;
+    transition: all 0.25s var(--ease);
+    box-shadow: var(--m-card-shadow);
+  }
+
+  .wc-card:hover {
+    box-shadow: var(--m-card-shadow-hover);
+    transform: none;
+  }
+
+  .wc-check {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    min-width: 36px;
+    border-radius: 50%;
+    background: var(--blush-light);
+    color: var(--blush-deep);
+    font-size: 0.95rem;
+    font-weight: 700;
+    flex-shrink: 0;
+  }
+
+  .wc-card strong {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text);
+    line-height: 1.35;
+  }
+
+  .wc-card > div > span {
+    font-size: 0.8rem;
+    color: var(--text-soft);
+    line-height: 1.5;
+  }
+
+
+  /* ══════════════════════════════════════════
+     ABOUT — COMPACT AUTHORITY-DRIVEN MOBILE
+  ══════════════════════════════════════════ */
+  .about {
+    padding-top: var(--m-section-gap);
+    padding-bottom: var(--m-section-gap);
   }
 
   .about-inner {
     display: flex;
     flex-direction: column-reverse;
-    gap: 2.5rem;
+    gap: 2rem;
+  }
+
+  .about-text h2 {
+    font-size: 1.45rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+
+  .about-lead {
+    font-size: 0.95rem;
+    line-height: 1.75;
+    margin-bottom: 0.8rem;
+  }
+
+  .about-text p {
+    font-size: 0.9rem;
+    line-height: 1.75;
+    margin-bottom: 0.7rem;
+  }
+
+  .about-creds {
+    margin-top: 1.4rem;
+    gap: 0.6rem;
+    background: var(--white);
+    border: 1px solid rgba(240, 208, 204, 0.5);
+    border-radius: var(--m-card-radius);
+    padding: 1.2rem 1.3rem;
+    box-shadow: var(--m-card-shadow);
+  }
+
+  .cred-item {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .cred-dot {
+    margin-top: 6px;
+  }
+
+  .about-photo {
+    height: 260px;
+    border-radius: var(--m-card-radius);
+  }
+
+  .about-card {
+    border-radius: var(--m-card-radius);
+  }
+
+  .about-quote {
+    padding: 1.5rem;
+    border-radius: var(--m-card-radius);
+  }
+
+  .about-quote p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+  }
+
+  .why-ron {
+    border-radius: var(--m-card-radius);
+  }
+
+  .why-ron .wr-item {
+    padding: 1rem 1.3rem;
+  }
+
+  .wr-title {
+    font-size: 0.88rem;
+  }
+
+  .wr-desc {
+    font-size: 0.82rem;
+    line-height: 1.6;
+  }
+
+
+  /* ══════════════════════════════════════════
+     CLINIC GALLERY — MOBILE
+  ══════════════════════════════════════════ */
+  .clinic {
+    padding-top: var(--m-section-gap);
+    padding-bottom: var(--m-section-gap);
   }
 
   .clinic-gallery {
     grid-template-columns: 1fr;
+    gap: 0.8rem;
   }
 
-  .pricing-grid {
+  .cg-item {
+    border-radius: var(--m-card-radius);
+  }
+
+
+  /* ══════════════════════════════════════════
+     TESTIMONIALS — MOBILE STACKED CARDS
+  ══════════════════════════════════════════ */
+  .testimonials {
+    padding-top: var(--m-section-gap);
+    padding-bottom: var(--m-section-gap);
+  }
+
+  .testimonials .section-head {
+    margin-bottom: 1.8rem;
+  }
+
+  .testi-layout {
     grid-template-columns: 1fr;
-    max-width: 380px;
+    gap: 0;
   }
 
-  .pkg-grid {
+  .testi-img-col {
+    display: none;
+  }
+
+  .tgrid {
+    gap: 1rem;
+  }
+
+  .tcard {
+    padding: 1.5rem 1.4rem;
+    border-radius: var(--m-card-radius);
+    box-shadow: var(--m-card-shadow);
+    border: 1px solid rgba(240, 208, 204, 0.5);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .tcard:hover {
+    transform: none;
+    box-shadow: var(--m-card-shadow-hover);
+  }
+
+  .tcard p {
+    font-size: 0.9rem;
+    line-height: 1.85;
+  }
+
+  .tcard-stars {
+    font-size: 1.05rem;
+    letter-spacing: 3px;
+  }
+
+  .tcard-name {
+    font-size: 0.8rem;
+    margin-top: 0.8rem;
+  }
+
+  .testi-trust-label {
+    font-size: 0.74rem;
+    padding: 6px 16px;
+  }
+
+  .testi-cta-row {
+    margin-top: 1.8rem;
+  }
+
+  .btn-testi-cta {
+    width: 100%;
+    justify-content: center;
+    padding: 14px 24px;
+    font-size: 0.92rem;
+    min-height: 52px;
+    border-radius: 60px;
+  }
+
+
+  /* ══════════════════════════════════════════
+     PROCESS — MOBILE 3 CARDS
+  ══════════════════════════════════════════ */
+  .process {
+    padding-top: var(--m-section-gap);
+    padding-bottom: var(--m-section-gap);
+  }
+
+  .process .section-head {
+    margin-bottom: 1.8rem;
+  }
+
+  .process-steps {
     grid-template-columns: 1fr;
-    max-width: 320px;
+    gap: 1rem;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr 1fr;
+  .process-steps::before {
+    display: none;
   }
 
-  .cta-strip {
-    flex-direction: column;
-    text-align: center;
+  .pstep {
+    background: var(--white);
+    border: 1px solid rgba(240, 208, 204, 0.5);
+    border-radius: var(--m-card-radius);
+    padding: 1.4rem 1.3rem;
+    text-align: right;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    box-shadow: var(--m-card-shadow);
+    transition: box-shadow 0.3s ease;
+  }
+
+  .pstep:hover {
+    box-shadow: var(--m-card-shadow-hover);
+  }
+
+  .pstep-num {
+    width: 44px;
+    height: 44px;
+    min-width: 44px;
+    font-size: 1.1rem;
+    margin: 0;
+    flex-shrink: 0;
+  }
+
+  .pstep h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+  }
+
+  .pstep p {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: var(--text-mid);
+  }
+
+
+  /* ══════════════════════════════════════════
+     FAQ — MOBILE
+  ══════════════════════════════════════════ */
+  .faq {
+    padding-top: var(--m-section-gap);
+    padding-bottom: var(--m-section-gap);
+  }
+
+  .faq-inner {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .faq-q {
+    font-size: 0.92rem;
+    padding: 1.15rem 0;
+    font-weight: 500;
+  }
+
+  .faq-a p {
+    font-size: 0.88rem;
+    line-height: 1.75;
+  }
+
+
+  /* ══════════════════════════════════════════
+     PRICING — HIDDEN ON MOBILE
+  ══════════════════════════════════════════ */
+  .pricing {
+    display: none !important;
+  }
+
+  /* Hide all inline price mentions */
+  .mobile-hide-price {
+    display: none !important;
+  }
+
+  /* Remove bottom border from FAQ (last visible section before final CTA) */
+  .faq {
+    border-bottom: none;
+  }
+
+
+  /* ══════════════════════════════════════════
+     FINAL CTA — MOBILE STICKY-FEEL PREMIUM
+  ══════════════════════════════════════════ */
+  .final-cta {
+    padding: 4rem var(--m-side-pad);
+  }
+
+  .final-cta::before {
+    font-size: 14rem;
+  }
+
+  .final-cta h2 {
+    font-size: 1.7rem;
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 0.8rem;
+  }
+
+  .fcta-sub {
+    font-size: 0.92rem;
+    line-height: 1.7;
+    margin-bottom: 2rem;
+  }
+
+  .btn-fcta {
+    width: 100%;
+    max-width: 360px;
+    min-height: var(--m-cta-height);
+    padding: 16px 28px;
+    font-size: 0.98rem;
+    justify-content: center;
+    border-radius: 60px;
+    animation: ctaPulse 3s ease-in-out infinite;
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35);
+  }
+
+  .btn-fcta:hover,
+  .btn-fcta:active {
+    background: #20bd5a;
   }
 
   .fcta-prices {
-    flex-direction: column;
-    gap: 1.5rem;
+    display: none;
   }
 
   .fcta-divider {
@@ -2734,24 +3450,95 @@ html.a11y-text-3 {
 
   .fcta-details {
     flex-direction: column;
+    gap: 0.6rem;
+    margin-top: 1.8rem;
+  }
+
+  .fcta-details span {
+    font-size: 0.84rem;
+  }
+
+  .fcta-legal {
+    font-size: 0.7rem;
+    margin-top: 1.8rem;
+    line-height: 1.7;
+  }
+
+
+  /* ══════════════════════════════════════════
+     CONTACT / INFO CARDS — MOBILE
+  ══════════════════════════════════════════ */
+  .contact {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+  }
+
+  .contact-grid {
+    grid-template-columns: 1fr 1fr;
     gap: 0.8rem;
   }
 
-  .pain,
-  .how,
-  .about,
-  .clinic,
-  .testimonials,
-  .process,
-  .faq,
-  .pricing,
-  .contact {
-    padding: 5rem 1.5rem;
+  .ccard {
+    padding: 1.3rem;
+    border-radius: 16px;
+    box-shadow: var(--m-card-shadow);
+  }
+
+  .ccard:hover {
+    transform: none;
+  }
+
+  .ccard-label {
+    font-size: 0.62rem;
+  }
+
+  .ccard-val {
+    font-size: 0.9rem;
+  }
+
+  .ccard-note {
+    font-size: 0.74rem;
+  }
+
+
+  /* ── Local trust strip ── */
+  .local-trust {
+    padding: 1.8rem var(--m-side-pad);
+  }
+
+  .local-trust-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem 1.5rem;
+    justify-items: start;
+  }
+
+  .lt-text {
+    font-size: 0.84rem;
+  }
+
+
+  /* ══════════════════════════════════════════
+     FLOATING WHATSAPP — MOBILE
+  ══════════════════════════════════════════ */
+  .wa-float {
+    bottom: 20px;
+    left: 20px;
+    width: 56px;
+    height: 56px;
+    font-size: 1.5rem;
+  }
+
+  .wa-float-tooltip {
+    display: none;
   }
 }
 
+/* ══════════════════════════════════════════
+   EXTRA SMALL SCREENS (< 480px)
+══════════════════════════════════════════ */
 @media (max-width: 480px) {
-  .how-grid {
+  .contact-grid {
     grid-template-columns: 1fr;
   }
 
@@ -2760,7 +3547,45 @@ html.a11y-text-3 {
     gap: 1.2rem;
   }
 
-  .contact-grid {
-    grid-template-columns: 1fr;
+  .mh-headline {
+    font-size: 1.65rem;
+    line-height: 1.35;
+  }
+
+  .mh-sub {
+    font-size: 0.9rem;
+    max-width: 300px;
+  }
+
+  .mh-btn {
+    max-width: 100%;
+    font-size: 0.95rem;
+    padding: 14px 24px;
+  }
+
+  .hero-content {
+    padding: 0 1.4rem 3.5rem;
+  }
+
+  .section-head h2 {
+    font-size: 1.45rem;
+  }
+
+  .pain-card {
+    padding: 1.4rem 1.2rem;
+  }
+
+  .how-card,
+  .pstep {
+    padding: 1.3rem 1.1rem;
+  }
+
+  .btn-fcta {
+    max-width: 100%;
+    font-size: 0.92rem;
+  }
+
+  .final-cta h2 {
+    font-size: 1.5rem;
   }
 }
