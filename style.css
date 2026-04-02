@@ -2533,6 +2533,14 @@ html.a11y-text-3 {
   display: none;
 }
 
+/* Hide mobile-only elements on desktop */
+.pain-intro-mobile,
+.pain-outro-mobile,
+.mh-trust-badge,
+.mh-support {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   /* ══════════════════════════════════════════
@@ -2762,7 +2770,29 @@ html.a11y-text-3 {
   }
 
   .mh-line2 {
-    margin-bottom: 2.4rem;
+    margin-bottom: 1.2rem;
+  }
+
+  /* ── Hero trust badge + support line ── */
+  .mh-trust-badge {
+    display: block;
+    font-size: 0.88rem;
+    font-weight: 500;
+    letter-spacing: 0.03em;
+    color: rgba(255, 255, 255, 0.7);
+    margin: 0 0 0.4rem;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+  }
+
+  .mh-support {
+    display: block;
+    font-size: 1rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.75);
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
+    margin: 0 0 2.2rem;
+    max-width: 340px;
   }
 
   /* ── Keep old .mh-sub hidden if still referenced ── */
@@ -2903,6 +2933,68 @@ html.a11y-text-3 {
   ══════════════════════════════════════════ */
   .pain {
     padding: 3rem var(--m-side-pad) 2.5rem;
+  }
+
+  /* ── Mobile emotional intro ── */
+  .pain-intro-mobile {
+    display: block;
+    text-align: center;
+    padding: 0 0.5rem 2rem;
+    max-width: 380px;
+    margin: 0 auto;
+  }
+
+  .pain-intro-mobile p {
+    font-size: 1.06rem;
+    line-height: 1.8;
+    color: var(--text-mid);
+    margin-bottom: 0.6rem;
+  }
+
+  .pain-intro-highlight {
+    font-weight: 500;
+    color: var(--text) !important;
+    font-style: italic;
+  }
+
+  /* ── Mobile outro ── */
+  .pain-outro-mobile {
+    display: block;
+    text-align: center;
+    padding: 2rem 0.5rem 0;
+    max-width: 360px;
+    margin: 0 auto;
+  }
+
+  .pain-outro-mobile p {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin-bottom: 0.4rem;
+  }
+
+  .pain-outro-highlight {
+    font-weight: 500;
+    color: var(--text) !important;
+    font-style: italic;
+  }
+
+  /* ── Authority bio + philosophy ── */
+  .mauth-bio {
+    font-size: 1.06rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin: 0 0 2rem;
+    text-align: center;
+  }
+
+  .mauth-philosophy {
+    font-size: 1.02rem;
+    line-height: 1.75;
+    color: var(--text-mid);
+    margin: 0 0 1.8rem;
+    text-align: center;
+    font-style: italic;
   }
 
   .pain .section-head {
