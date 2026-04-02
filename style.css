@@ -2561,6 +2561,7 @@ html.a11y-text-3 {
     padding: 0 var(--m-side-pad) !important;
     justify-content: space-between !important;
     flex-direction: row !important;
+    align-items: center !important;
     background: transparent !important;
     box-shadow: none !important;
     position: absolute !important;
@@ -2568,7 +2569,7 @@ html.a11y-text-3 {
     left: 0;
     right: 0;
     z-index: 100;
-    height: 70px;
+    height: 64px;
   }
 
   nav#main-nav.scrolled {
@@ -2581,20 +2582,28 @@ html.a11y-text-3 {
     background-color: var(--text) !important;
   }
 
+  /* On scroll the logo blends into warm bg */
+  nav#main-nav.scrolled .nav-logo-mobile {
+    mix-blend-mode: multiply;
+    filter: none;
+  }
+
   .nav-logo-desktop {
     display: none !important;
   }
 
   .nav-logo-mobile {
     display: block !important;
-    max-height: 44px !important;
-    width: auto !important;
-    opacity: 1;
+    width: 42px !important;
+    height: 42px !important;
+    object-fit: contain;
+    border-radius: 50%;
     background: none !important;
     border: none !important;
-    border-radius: 0 !important;
     box-shadow: none !important;
-    filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.15));
+    padding: 0 !important;
+    margin: 0 !important;
+    filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.12));
   }
 
   .nav-logo {
@@ -2602,6 +2611,9 @@ html.a11y-text-3 {
     display: flex;
     align-items: center;
     height: 100%;
+    padding: 0;
+    margin: 0;
+    line-height: 0;
   }
 
   .nav-logo-text {
@@ -2610,7 +2622,9 @@ html.a11y-text-3 {
 
   .nav-hamburger {
     display: flex;
+    align-items: center;
     order: unset;
+    height: 100%;
   }
 
   .nav-hamburger span {
