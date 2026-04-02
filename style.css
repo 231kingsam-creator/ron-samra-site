@@ -2528,6 +2528,11 @@ html.a11y-text-3 {
   color: inherit !important;
 }
 
+/* Hide mobile-only authority section on desktop */
+.mobile-authority {
+  display: none;
+}
+
 @media (max-width: 768px) {
 
   /* ══════════════════════════════════════════
@@ -3220,6 +3225,144 @@ html.a11y-text-3 {
     line-height: 1.7;
     color: var(--text-mid);
     max-width: 300px;
+  }
+
+
+  /* ══════════════════════════════════════════
+     MOBILE AUTHORITY — TRUST + CTA BLOCK
+  ══════════════════════════════════════════ */
+  .mobile-authority {
+    display: block;
+    padding: 3.5rem var(--m-side-pad);
+    text-align: center;
+    background: var(--warm);
+    border-top: 1px solid rgba(232, 180, 176, 0.15);
+    border-bottom: 1px solid rgba(232, 180, 176, 0.15);
+  }
+
+  .mauth-inner {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+
+  .mauth-title {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.28;
+    margin: 0 0 2rem;
+  }
+
+  /* ── Trust badges — 3-column grid ── */
+  .mauth-badges {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+  }
+
+  .mauth-badge {
+    background: var(--white);
+    border: 1px solid rgba(240, 208, 204, 0.35);
+    border-radius: 16px;
+    padding: 1.2rem 0.6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.3rem;
+    box-shadow: 0 1px 8px rgba(196, 122, 116, 0.06);
+  }
+
+  .mauth-badge-num {
+    font-family: 'Heebo', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--blush-deep);
+    line-height: 1;
+  }
+
+  .mauth-badge-label {
+    font-size: 0.82rem;
+    color: var(--text-mid);
+    font-weight: 400;
+    line-height: 1.3;
+  }
+
+  /* ── Testimonial proof ── */
+  .mauth-quote {
+    font-size: 1.08rem;
+    font-style: italic;
+    font-weight: 300;
+    line-height: 1.7;
+    color: var(--text-mid);
+    margin: 0 0 1.8rem;
+    padding: 0 0.5rem;
+    border: none;
+  }
+
+  /* ── Credential tags ── */
+  .mauth-creds {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 2.2rem;
+  }
+
+  .mauth-creds span {
+    font-size: 0.78rem;
+    font-weight: 500;
+    color: var(--text-mid);
+    background: var(--white);
+    border: 1px solid rgba(240, 208, 204, 0.4);
+    border-radius: 60px;
+    padding: 6px 14px;
+    white-space: nowrap;
+  }
+
+  /* ── WhatsApp CTA ── */
+  .mauth-cta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 320px;
+    min-height: 56px;
+    padding: 16px 28px;
+    margin: 0 auto 1rem;
+    border-radius: 60px;
+    font-size: 1.15rem;
+    font-weight: 600;
+    text-decoration: none;
+    background: #25D366;
+    color: #fff;
+    border: none;
+    box-shadow: 0 6px 24px rgba(37, 211, 102, 0.3);
+    animation: ctaPulse 3s ease-in-out infinite;
+    transition: all 0.3s ease;
+  }
+
+  .mauth-cta:hover,
+  .mauth-cta:active {
+    background: #20bd5a;
+    box-shadow: 0 8px 32px rgba(37, 211, 102, 0.45);
+    transform: translateY(-2px);
+  }
+
+  /* ── Secondary about link ── */
+  .mauth-link {
+    display: inline-block;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--blush-deep);
+    text-decoration: none;
+    padding: 8px 0;
+    transition: opacity 0.2s ease;
+  }
+
+  .mauth-link:hover {
+    opacity: 0.7;
   }
 
 
