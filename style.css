@@ -2543,6 +2543,12 @@ html.a11y-text-3 {
     --m-side-pad: 1.4rem;
   }
 
+  /* Hide pricing link from mobile menu */
+  .mobile-menu a[href="#pricing"],
+  .mobile-menu li:has(a[href="#pricing"]) {
+    display: none !important;
+  }
+
   /* ══════════════════════════════════════════
      MOBILE NAVIGATION
   ══════════════════════════════════════════ */
