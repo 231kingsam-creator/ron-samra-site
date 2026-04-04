@@ -1,4 +1,4 @@
-/* ============================================================
+﻿/* ============================================================
    Fix & Flow · רון סמרה · רפואה סינית
    style.css — v2.0 Premium Design System
    ============================================================ */
@@ -2669,6 +2669,7 @@ html.a11y-text-3 {
 /* Hide mobile-only elements on desktop */
 .pain-intro-mobile,
 .pain-outro-mobile,
+.pain-bridge,
 .mh-trust-badge,
 .mh-support,
 .mh-context {
@@ -3132,7 +3133,19 @@ html.a11y-text-3 {
     font-style: italic;
   }
 
-  .pain .section-head {
+  /* ── Bridge label between intro and cards ── */
+  .pain-bridge {
+    display: block;
+    text-align: center;
+    padding: 0 0.5rem 1.4rem;
+    font-size: 0.82rem;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--text-soft);
+    opacity: 0.75;
+  }
+
+    .pain .section-head {
     margin-bottom: 2rem;
     text-align: center;
   }
