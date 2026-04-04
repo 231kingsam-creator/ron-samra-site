@@ -2685,9 +2685,10 @@ html.a11y-text-3 {
   display: none;
 }
 
-/* Hide article mini-links on desktop — mobile only */
+/* Hide article mini-links and related-treatment line on desktop — mobile only */
 .article-mini-link,
-.article-mini-row {
+.article-mini-row,
+.pain-card-related {
   display: none;
 }
 
@@ -3347,6 +3348,30 @@ html.a11y-text-3 {
     margin-top: 0;
     text-align: center;
     font-size: 0.84rem;
+  }
+
+  /* ── Related treatments — subtle text line below pain card CTA ── */
+  .pain-card-related {
+    display: block;
+    margin-top: 1rem;
+    padding-top: 0.85rem;
+    border-top: 1px solid rgba(196, 122, 116, 0.13);
+    font-size: 0.77rem;
+    color: var(--blush-mid);
+    text-align: right;
+    line-height: 1.6;
+  }
+
+  .pain-card-related a {
+    color: var(--blush-deep);
+    text-decoration: none;
+    opacity: 0.8;
+  }
+
+  .pain-card-related a:hover,
+  .pain-card-related a:active {
+    opacity: 1;
+    text-decoration: underline;
   }
 
 
