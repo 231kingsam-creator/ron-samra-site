@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="he" dir="rtl">
 
 <head>
@@ -49,6 +49,37 @@
 
   <!-- ── Stylesheet ── -->
   <link rel="stylesheet" href="style.css">
+
+  <!-- ── A11y Preload: apply persisted settings before first paint ── -->
+  <script>
+    (function () {
+      var DEFAULTS = {
+        keyboardNav: false, disableAnimations: false, highContrast: false,
+        textScale: 0, readableFont: false, highlightHeadings: false, highlightLinks: false
+      };
+      var state = DEFAULTS;
+      try {
+        var saved = localStorage.getItem('a11y-settings');
+        if (saved) state = Object.assign({}, DEFAULTS, JSON.parse(saved));
+      } catch (e) {}
+
+      // Apply text-scale to <html> immediately (synchronous, before CSS paint)
+      var html = document.documentElement;
+      html.classList.remove('a11y-text-1', 'a11y-text-2', 'a11y-text-3');
+      if (state.textScale > 0) html.classList.add('a11y-text-' + state.textScale);
+
+      // Apply body classes once DOM is available
+      document.addEventListener('DOMContentLoaded', function () {
+        var body = document.body;
+        body.classList.toggle('a11y-keyboard-nav',      state.keyboardNav);
+        body.classList.toggle('a11y-no-animations',     state.disableAnimations);
+        body.classList.toggle('a11y-high-contrast',     state.highContrast);
+        body.classList.toggle('a11y-readable-font',     state.readableFont);
+        body.classList.toggle('a11y-highlight-headings',state.highlightHeadings);
+        body.classList.toggle('a11y-highlight-links',   state.highlightLinks);
+      });
+    })();
+  </script>
 </head>
 
 <body>

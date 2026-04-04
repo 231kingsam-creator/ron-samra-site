@@ -148,6 +148,7 @@ document.addEventListener('DOMContentLoaded', () => {
           <button class="a11y-toggle" data-action="readableFont" aria-pressed="false">גופן קריא</button>
           <button class="a11y-toggle" data-action="highlightHeadings" aria-pressed="false">סימון כותרות</button>
           <button class="a11y-toggle" data-action="highlightLinks" aria-pressed="false">סימון קישורים ולחצנים</button>
+          <button class="a11y-toggle" data-action="resetA11y" aria-pressed="false" style="margin-top:0.35rem;opacity:.85;">↺ איפוס התאמות</button>
         </div>
       </div>
     `;
@@ -208,11 +209,19 @@ document.addEventListener('DOMContentLoaded', () => {
 
     applyState();
 
+    // Defaults reference for reset
+    const DEFAULTS = {
+      keyboardNav: false, disableAnimations: false, highContrast: false,
+      textScale: 0, readableFont: false, highlightHeadings: false, highlightLinks: false
+    };
+
     // Toggle logic
     toggles.forEach(t => {
       t.addEventListener('click', () => {
         const action = t.dataset.action;
-        if (action === 'increaseText') {
+        if (action === 'resetA11y') {
+          state = { ...DEFAULTS };
+        } else if (action === 'increaseText') {
           state.textScale = Math.min(state.textScale + 1, 3);
         } else if (action === 'decreaseText') {
           state.textScale = Math.max(state.textScale - 1, 0);
