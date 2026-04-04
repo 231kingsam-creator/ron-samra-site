@@ -172,13 +172,6 @@ document.addEventListener('DOMContentLoaded', () => {
       highlightLinks: false
     };
 
-    // Load from local storage
-    const saved = localStorage.getItem('a11y-settings');
-    if (saved) {
-      try { state = { ...state, ...JSON.parse(saved) }; } catch (e) {}
-    }
-
-    const saveState = () => localStorage.setItem('a11y-settings', JSON.stringify(state));
 
     const applyState = () => {
       // Toggle body classes based on booleans
@@ -228,7 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
           state[action] = !state[action];
         }
-        saveState();
         applyState();
       });
     });
