@@ -3042,9 +3042,13 @@ html.a11y-text-3 {
   .process,
   .faq,
   .pricing,
-  .contact,
-  .why-choose {
+  .contact {
     padding: var(--m-section-gap) var(--m-side-pad);
+  }
+
+  /* why-choose is redundant on mobile — mobile-authority covers this content */
+  .why-choose {
+    display: none !important;
   }
 
   .section-inner {
@@ -3262,6 +3266,15 @@ html.a11y-text-3 {
   }
 
   /* WhatsApp CTA inside card */
+  /* CTA fatigue reduction: hide per-card CTAs on cards 2 & 3;
+     the cluster CTA strip after the grid serves as the single conversion point */
+  .pain-card:nth-child(2) .pain-card-cta,
+  .pain-card:nth-child(3) .pain-card-cta,
+  .pain-card:nth-child(2) .cta-micro-trust,
+  .pain-card:nth-child(3) .cta-micro-trust {
+    display: none !important;
+  }
+
   .pain-card-cta {
     display: inline-flex;
     align-items: center;
@@ -3487,8 +3500,13 @@ html.a11y-text-3 {
   }
 
 
+  /* post-hero CTA removed on mobile — hero CTA is immediately above */
+  .post-hero-trust-cta {
+    display: none !important;
+  }
+
   /* ══════════════════════════════════════════
-     MOBILE AUTHORITY — TRUST + CTA BLOCK
+     MOBILE AUTHORITY — CONSOLIDATED TRUST BLOCK
   ══════════════════════════════════════════ */
   .mobile-authority {
     display: block;
@@ -3506,7 +3524,7 @@ html.a11y-text-3 {
 
   .mauth-title {
     font-family: 'Heebo', sans-serif;
-    font-size: 1.9rem;
+    font-size: 1.65rem;
     font-weight: 700;
     color: var(--text);
     line-height: 1.28;
@@ -3629,15 +3647,7 @@ html.a11y-text-3 {
   /* ══════════════════════════════════════════
      WHY CHOOSE ME — MOBILE CHECKLIST
   ══════════════════════════════════════════ */
-  .why-choose {
-    background: var(--warm);
-    padding: var(--m-section-gap) var(--m-side-pad);
-  }
-
-  .why-choose .section-head {
-    margin-bottom: 1.8rem;
-  }
-
+  /* why-choose hidden on mobile — see above */
   .why-choose-grid {
     display: flex;
     flex-direction: column;
