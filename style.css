@@ -558,6 +558,18 @@ nav.scrolled {
   border-color: var(--blush-deep);
 }
 
+.hero-cta-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.hero-cta-note {
+  font-size: 13px;
+  color: var(--text-soft);
+  text-align: center;
+}
+
 .hero-trust {
   display: flex;
   gap: 2rem;
@@ -658,6 +670,127 @@ nav.scrolled {
   font-weight: 600;
   box-shadow: 0 6px 20px rgba(196, 122, 116, 0.35);
   animation: float 4s 1.5s ease-in-out infinite;
+}
+
+/* ── POST-HERO TRUST BRIDGE ── */
+.post-hero-trust {
+  background: var(--blush-light);
+  padding: 5rem 2.5rem;
+  border-top: 1px solid var(--blush-mid);
+  border-bottom: 1px solid var(--blush-mid);
+}
+
+.post-hero-trust-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+  text-align: center;
+  max-width: 680px;
+}
+
+/* Kicker */
+.post-hero-kicker {
+  font-size: 0.72rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+  font-weight: 500;
+  margin-bottom: 0.6rem;
+}
+
+/* h2 — scoped to this section only */
+.post-hero-trust-copy h2 {
+  font-size: 1.75rem;
+  font-weight: 600;
+  line-height: 1.35;
+  color: var(--text);
+  margin-bottom: 1rem;
+}
+
+.post-hero-trust-copy p {
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.85;
+  color: var(--text-mid);
+  max-width: 560px;
+}
+
+/* Badge grid */
+.post-hero-trust-badges {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  width: 100%;
+}
+
+.ph-badge {
+  background: var(--white);
+  border: 1px solid var(--blush-mid);
+  border-radius: var(--radius-md);
+  padding: 1.4rem 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  box-shadow: var(--shadow-pink);
+  transition: transform 0.25s var(--ease);
+}
+
+.ph-badge:hover {
+  transform: translateY(-3px);
+}
+
+.ph-num {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: var(--blush-deep);
+  line-height: 1;
+}
+
+.ph-label {
+  font-size: 0.78rem;
+  color: var(--text-soft);
+  letter-spacing: 0.06em;
+}
+
+/* CTA block */
+.post-hero-trust-cta {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.post-hero-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background: var(--blush-deep);
+  color: #fff;
+  padding: 14px 32px;
+  border-radius: 100px;
+  font-size: 1rem;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  text-decoration: none;
+  transition: all 0.28s var(--ease);
+  box-shadow: 0 6px 24px rgba(196, 122, 116, 0.3);
+}
+
+.post-hero-btn:hover {
+  background: var(--blush-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(196, 122, 116, 0.42);
+}
+
+.post-hero-note {
+  font-size: 13px;
+  color: var(--text-soft);
+  text-align: center;
+  line-height: 1.5;
 }
 
 /* ── MARQUEE STRIP ── */
@@ -2537,7 +2670,15 @@ html.a11y-text-3 {
 .pain-intro-mobile,
 .pain-outro-mobile,
 .mh-trust-badge,
-.mh-support {
+.mh-support,
+.mh-context {
+  display: none;
+}
+
+/* Hide micro-trust lines on desktop — mobile only */
+.cta-micro-trust,
+.fcta-micro-trust,
+.mauth-micro-trust {
   display: none;
 }
 
@@ -2732,117 +2873,111 @@ html.a11y-text-3 {
 
   /* ── Centered Logo ── */
   .mh-logo {
-    width: 56px;
-    height: 56px;
+    width: 52px;
+    height: 52px;
     object-fit: contain;
     border-radius: 50%;
-    margin-bottom: 1.6rem;
+    margin-bottom: 1.2rem;
     filter: drop-shadow(0 2px 8px rgba(0, 0, 0, 0.2));
   }
 
-  /* ── Headline — big, readable, emotional ── */
+  /* ── Headline — dominant, emotional ── */
   .mh-headline {
     font-family: 'Heebo', sans-serif;
-    font-size: 2.5rem;
+    font-size: 2.4rem;
     font-weight: 700;
     letter-spacing: -0.02em;
-    line-height: 1.28;
-    margin: 0 0 1.6rem;
+    line-height: 1.25;
+    margin: 0 0 1rem;
     color: #ffffff;
-    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    text-shadow: 0 2px 20px rgba(0, 0, 0, 0.55);
   }
 
-  /* ── Two short supporting lines ── */
-  .mh-line1,
-  .mh-line2 {
-    display: block;
-    font-size: 1.2rem;
+  /* ── Context line — softer, readable, bridge to CTA ── */
+  .mh-context {
+    font-size: 1.05rem;
     font-weight: 300;
-    letter-spacing: 0.01em;
     line-height: 1.6;
-    color: rgba(255, 255, 255, 0.88);
+    color: rgba(255, 255, 255, 0.78);
     text-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);
-    margin: 0;
-  }
-
-  .mh-line1 {
-    margin-bottom: 0.4rem;
-  }
-
-  .mh-line2 {
-    margin-bottom: 1.2rem;
-  }
-
-  /* ── Hero trust badge + support line ── */
-  .mh-trust-badge {
-    display: block;
-    font-size: 0.88rem;
-    font-weight: 500;
-    letter-spacing: 0.03em;
-    color: rgba(255, 255, 255, 0.7);
-    margin: 0 0 0.4rem;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-  }
-
-  .mh-support {
-    display: block;
-    font-size: 1rem;
-    font-weight: 300;
-    line-height: 1.6;
-    color: rgba(255, 255, 255, 0.75);
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.25);
-    margin: 0 0 2.2rem;
+    margin: 0 0 1.4rem;
     max-width: 340px;
   }
 
-  /* ── Keep old .mh-sub hidden if still referenced ── */
+  /* ── Trust badge — compact premium reassurance card ── */
+  .mh-trust-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    border-radius: 60px;
+    padding: 8px 18px;
+    margin: 0 0 1.6rem;
+    width: fit-content;
+    max-width: 100%;
+  }
+
+  .mh-tb-icon {
+    font-size: 0.9rem;
+    flex-shrink: 0;
+  }
+
+  .mh-tb-text {
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+    color: rgba(255, 255, 255, 0.88);
+    white-space: nowrap;
+  }
+
+  /* ── Lines (hidden — removed from DOM, kept as safety) ── */
+  .mh-line1,
+  .mh-line2,
+  .mh-trust-line {
+    display: none;
+  }
+
+  /* Keep old .mh-sub hidden if still referenced */
   .mh-sub {
     display: none;
   }
 
-  /* ── CTA inline logo icon (used elsewhere) ── */
-  .cta-icon {
-    width: 24px;
-    height: 24px;
-    object-fit: contain;
-    border-radius: 50%;
-    flex-shrink: 0;
-    vertical-align: middle;
-    margin-inline-end: 0.3rem;
-  }
-
-  /* ── WhatsApp CTA — single, big, clean ── */
+  /* ── WhatsApp CTA — full-width, high-contrast, easy thumb tap ── */
   .mh-btn {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
-    padding: 18px 32px;
+    padding: 17px 28px;
     border-radius: 60px;
-    font-size: 1.15rem;
+    font-size: 18px;
+    line-height: 1.35;
     font-weight: 600;
     letter-spacing: 0.01em;
     text-decoration: none;
     transition: all 0.3s cubic-bezier(0.23, 1, 0.32, 1);
     width: 100%;
-    max-width: 320px;
+    max-width: 340px;
     min-height: 56px;
-
     background: #25D366;
     border: none;
     color: #ffffff;
     box-shadow:
-      0 6px 24px rgba(37, 211, 102, 0.35),
+      0 6px 24px rgba(37, 211, 102, 0.38),
       0 0 0 0 rgba(37, 211, 102, 0);
     animation: ctaPulse 3s ease-in-out infinite;
   }
 
   @keyframes ctaPulse {
     0%, 100% {
-      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.35), 0 0 0 0 rgba(37, 211, 102, 0.15);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.38), 0 0 0 0 rgba(37, 211, 102, 0.15);
     }
     50% {
-      box-shadow: 0 6px 32px rgba(37, 211, 102, 0.5), 0 0 0 10px rgba(37, 211, 102, 0);
+      box-shadow: 0 6px 32px rgba(37, 211, 102, 0.55), 0 0 0 10px rgba(37, 211, 102, 0);
     }
   }
 
@@ -2853,16 +2988,16 @@ html.a11y-text-3 {
     transform: translateY(-2px);
   }
 
-  /* ── Trust micro-text under CTA ── */
-  .mh-trust-line {
+  /* ── Support — quiet micro-trust line under CTA ── */
+  .mh-support {
     display: block;
-    margin-top: 1.2rem;
-    font-size: 0.85rem;
+    margin-top: 0.9rem;
+    font-size: 0.82rem;
     font-weight: 300;
     letter-spacing: 0.04em;
-    color: rgba(255, 255, 255, 0.6);
+    color: rgba(255, 255, 255, 0.55);
     text-align: center;
-    line-height: 1.7;
+    line-height: 1.5;
   }
 
 
@@ -3099,7 +3234,8 @@ html.a11y-text-3 {
     align-items: center;
     justify-content: center;
     gap: 0.4rem;
-    font-size: 1rem;
+    font-size: 18px;
+    line-height: 1.35;
     font-weight: 600;
     color: #fff;
     text-decoration: none;
@@ -3424,7 +3560,8 @@ html.a11y-text-3 {
     padding: 16px 28px;
     margin: 0 auto 1rem;
     border-radius: 60px;
-    font-size: 1.15rem;
+    font-size: 19px;
+    line-height: 1.35;
     font-weight: 600;
     text-decoration: none;
     background: #25D366;
@@ -3900,7 +4037,8 @@ html.a11y-text-3 {
     max-width: 340px;
     min-height: 60px;
     padding: 18px 32px;
-    font-size: 1.25rem;
+    font-size: 20px;
+    line-height: 1.35;
     font-weight: 700;
     border-radius: 60px;
     margin: 0 auto;
@@ -4019,6 +4157,86 @@ html.a11y-text-3 {
 
   .wa-float-tooltip {
     display: none;
+  }
+
+  /* ══════════════════════════════════════════
+     MICRO-TRUST LINES — MOBILE ONLY
+  ══════════════════════════════════════════ */
+  .cta-micro-trust,
+  .fcta-micro-trust,
+  .mauth-micro-trust {
+    display: block;
+  }
+
+  .cta-micro-trust {
+    font-size: 13px;
+    line-height: 1.5;
+    color: var(--text-soft);
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  /* Trust line below mauth CTA — centered in its section */
+  .mauth-micro-trust {
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  /* Trust line below final CTA — centered */
+  .fcta-micro-trust {
+    max-width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    color: var(--text-mid);
+  }
+
+
+  /* ══════════════════════════════════════════
+     POST-HERO TRUST — MOBILE
+  ══════════════════════════════════════════ */
+  .post-hero-trust {
+    padding: 3.5rem var(--m-side-pad);
+  }
+
+  .post-hero-trust-inner {
+    gap: 2rem;
+  }
+
+  .post-hero-trust-copy h2 {
+    font-size: 1.5rem;
+    line-height: 1.3;
+  }
+
+  .post-hero-trust-copy p {
+    font-size: 1rem;
+    line-height: 1.75;
+  }
+
+  .post-hero-trust-badges {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 0.7rem;
+  }
+
+  .ph-badge {
+    padding: 1.1rem 0.6rem;
+    border-radius: 16px;
+  }
+
+  .ph-num {
+    font-size: 1.5rem;
+  }
+
+  .ph-label {
+    font-size: 0.72rem;
+  }
+
+  .post-hero-btn {
+    width: 100%;
+    max-width: 340px;
+    font-size: 1rem;
+    padding: 15px 24px;
+    border-radius: 60px;
   }
 }
 
