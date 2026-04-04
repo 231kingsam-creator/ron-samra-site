@@ -101,6 +101,49 @@
   color: var(--text);
 }
 
+/* Related treatments/articles section */
+.article-related {
+  margin-top: 2.8rem;
+  padding-top: 2rem;
+  border-top: 1px solid var(--blush-mid);
+}
+.article-related h3 {
+  font-size: 0.72rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--blush-deep);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+.article-related ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+}
+.article-related ul li {
+  font-size: 0.9rem;
+  margin: 0;
+}
+.article-related ul li::before {
+  content: none;
+}
+.article-related ul li a {
+  color: var(--blush-deep);
+  text-decoration: none;
+  font-weight: 400;
+  transition: color 0.2s;
+}
+.article-related ul li a::before {
+  content: '← ';
+  opacity: 0.5;
+}
+.article-related ul li a:hover {
+  color: var(--blush-dark);
+}
+
 /* CTA box at end of article */
 .article-cta-box {
   margin-top: 3.5rem;
