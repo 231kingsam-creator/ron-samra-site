@@ -10,13 +10,13 @@
   <meta name="keywords" content="דיקור סיני מודיעין, רפואה סינית מודיעין, רון סמרה, fix and flow, כאבי גב, כאב כרוני, טיפול הוליסטי">
   <meta name="author" content="רון סמרה">
   <meta name="robots" content="index, follow">
-  <link rel="canonical" href="https://www.samraron.co.il/">
+  <link rel="canonical" href="https://www.samraron.co.il/articles.html">
 
   <!-- ── Open Graph ── -->
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.samraron.co.il/">
-  <meta property="og:title" content="Fix &amp; Flow · רון סמרה · רפואה סינית מודיעין">
-  <meta property="og:description" content="35+ שנות ניסיון בדיקור סיני. קליניקה פרטית במודיעין. סגירת תור בוואטסאפ.">
+  <meta property="og:url" content="https://www.samraron.co.il/articles.html">
+  <meta property="og:title" content="מאמרים על רפואה סינית · Fix &amp; Flow · רון סמרה">
+  <meta property="og:description" content="מידע, תובנות וטיפים מעולם הרפואה הסינית — כאב, שינה, סטרס, פוריות ועוד. רון סמרה, 35+ שנות ניסיון.">
   <meta property="og:image" content="images/clinic/ron-portrait-clinic.jpg">
 
   <!-- ── Structured Data ── -->
@@ -99,78 +99,176 @@
   </a>
 </div>
 
-<!-- HEADER -->
-<div class="articles-hero">
-  <h1>מאמרים</h1>
-  <p>מידע, תובנות וטיפים מעולם הרפואה הסינית</p>
+<!-- ════════════════════════════════════════
+     ARTICLES HERO
+════════════════════════════════════════ -->
+<section class="alp-hero" aria-label="כותרת מאמרים">
+  <div class="alp-hero-inner">
+    <nav class="alp-breadcrumb" aria-label="ניווט">
+      <a href="index.html">ראשי</a>
+      <span aria-hidden="true">←</span>
+      <span aria-current="page">מאמרים</span>
+    </nav>
+    <div class="alp-hero-kicker">מידע מקצועי · רפואה סינית</div>
+    <h1 class="alp-hero-h1">מה הגוף מנסה לומר —<br><em>והאם כדאי להקשיב</em></h1>
+    <p class="alp-hero-sub">מאמרים מאת רון סמרה, 35+ שנות ניסיון קליני ברפואה סינית מסורתית</p>
+    <div class="alp-hero-meta">
+      <span>6 מאמרים</span>
+      <span aria-hidden="true">·</span>
+      <span>כאב · שינה · סטרס · פוריות · בריאות</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- ════════════════════════════════════════
+     CATEGORY FILTER
+════════════════════════════════════════ -->
+<div class="alp-filter-bar" role="navigation" aria-label="סינון לפי קטגוריה">
+  <div class="alp-filter-inner">
+    <button class="alp-filter-btn active" data-filter="all" aria-pressed="true">הכל</button>
+    <button class="alp-filter-btn" data-filter="כאב" aria-pressed="false">כאב</button>
+    <button class="alp-filter-btn" data-filter="שינה" aria-pressed="false">שינה</button>
+    <button class="alp-filter-btn" data-filter="סטרס" aria-pressed="false">סטרס</button>
+    <button class="alp-filter-btn" data-filter="פוריות" aria-pressed="false">פוריות</button>
+    <button class="alp-filter-btn" data-filter="בריאות" aria-pressed="false">בריאות</button>
+  </div>
 </div>
 
-<!-- GRID -->
-<div class="articles-grid-section">
-  <div class="articles-grid">
 
-    <a href="article-headache.html" class="article-card">
-      <img src="images/articles/article-headache.png" alt="כאבי ראש ורפואה סינית" class="article-card-img" loading="lazy">
-      <div class="article-card-body">
-        <div class="article-card-cat">כאב וניהולו</div>
-        <div class="article-card-title">כל מה שרצית לדעת על כאב ראש</div>
-        <div class="article-card-excerpt">מסתובבים כבר כמה ימים עם כאב ראש מטריד שלא נותן מנוח? גלו איך הרפואה הסינית מבינה ומטפלת בכאבי ראש.</div>
-        <div class="article-card-link">קראו עוד ←</div>
+<!-- ════════════════════════════════════════
+     FEATURED ARTICLE
+════════════════════════════════════════ -->
+<div class="alp-featured-wrap">
+  <div class="alp-featured-inner">
+    <a href="article-fertility.html" class="alp-featured-card" data-category="פוריות" aria-label="מאמר מוצג: רפואה סינית ופוריות האישה">
+      <div class="alp-featured-img-col">
+        <img src="images/articles/article-fertility.png" alt="רפואה סינית ופוריות האישה" loading="eager">
+        <div class="alp-featured-img-overlay" aria-hidden="true"></div>
+      </div>
+      <div class="alp-featured-body">
+        <div class="alp-featured-tag" aria-label="קטגוריה">פוריות ובריאות האישה</div>
+        <div class="alp-featured-badge" aria-label="מאמר מוצג">מאמר נבחר</div>
+        <h2 class="alp-featured-title">רפואה סינית ופוריות האישה</h2>
+        <p class="alp-featured-excerpt">שילוב דיקור סיני בטיפולי פוריות זוכה לתמיכה מחקרית רחבה יותר ויותר. מחקרים מראים שיפור משמעותי בסיכויי ההתעברות — גם בטיפולי IVF וגם בהריון טבעי. גלו כיצד הגישה ההוליסטית של הרפואה הסינית עשויה לעזור.</p>
+        <div class="alp-featured-footer">
+          <span class="alp-read-time" aria-label="זמן קריאה משוער">קריאה · 5 דק׳</span>
+          <span class="alp-featured-cta">קראו את המאמר ←</span>
+        </div>
       </div>
     </a>
+  </div>
+</div>
 
-    <a href="article-sleep.html" class="article-card">
-      <img src="images/articles/article-sleep.png" alt="בעיות שינה וטיפול בדיקור" class="article-card-img" loading="lazy">
-      <div class="article-card-body">
-        <div class="article-card-cat">שינה ומנוחה</div>
-        <div class="article-card-title">למה יש לנו בעיות שינה?</div>
-        <div class="article-card-excerpt">לא מצליחים להירדם? מתעוררים באמצע הלילה? שליש מחיינו עוברים בשינה — איכות השינה משפיעה על הכל.</div>
-        <div class="article-card-link">קראו עוד ←</div>
-      </div>
-    </a>
 
-    <a href="article-allergies.html" class="article-card">
-      <img src="images/articles/article-allergies.png" alt="אלרגיות וטיפול ברפואה סינית" class="article-card-img" loading="lazy">
-      <div class="article-card-body">
-        <div class="article-card-cat">אלרגיות ומערכת החיסון</div>
-        <div class="article-card-title">לנצח את האלרגיה</div>
-        <div class="article-card-excerpt">התחיל האביב? נזלת, עיניים גרדניות, עטיסות? מעל 20% מהאוכלוסייה סובלים — ויש מה לעשות.</div>
-        <div class="article-card-link">קראו עוד ←</div>
-      </div>
-    </a>
+<!-- ════════════════════════════════════════
+     ARTICLES GRID
+════════════════════════════════════════ -->
+<div class="alp-grid-section">
+  <div class="alp-grid-inner">
 
-    <a href="article-sweating.html" class="article-card">
-      <img src="images/articles/article-sweating.png" alt="הזעת יתר וטיפול טבעי" class="article-card-img" loading="lazy">
-      <div class="article-card-body">
-        <div class="article-card-cat">בריאות כללית</div>
-        <div class="article-card-title">סובלים מהזעת יתר?</div>
-        <div class="article-card-excerpt">הזעת יתר משפיעה על איכות החיים ועל הביטחון העצמי. הרפואה הסינית מציעה פתרון טבעי ויעיל.</div>
-        <div class="article-card-link">קראו עוד ←</div>
-      </div>
-    </a>
+    <div class="alp-no-results" role="status" aria-live="polite" style="display:none;">
+      לא נמצאו מאמרים בקטגוריה זו.
+    </div>
 
-    <a href="article-fertility.html" class="article-card">
-      <img src="images/articles/article-fertility.png" alt="פוריות ורפואה סינית" class="article-card-img" loading="lazy">
-      <div class="article-card-body">
-        <div class="article-card-cat">פוריות ובריאות האישה</div>
-        <div class="article-card-title">רפואה סינית ופוריות האישה</div>
-        <div class="article-card-excerpt">שילוב דיקור סיני בטיפולי פוריות זוכה לתמיכה מחקרית רחבה. גלו כיצד הטיפול משפר את סיכויי ההתעברות.</div>
-        <div class="article-card-link">קראו עוד ←</div>
-      </div>
-    </a>
+    <div class="alp-grid" role="list">
 
-    <a href="article-gynecology.html" class="article-card">
-      <img src="images/articles/article-gynecology.png" alt="בעיות גינקולוגיות ורפואה סינית" class="article-card-img" loading="lazy">
-      <div class="article-card-body">
-        <div class="article-card-cat">פוריות ובריאות האישה</div>
-        <div class="article-card-title">בעיות גינקולוגיות ורפואה סינית</div>
-        <div class="article-card-excerpt">יותר ויותר נשים פונות לרפואה סינית לטיפול בבעיות גינקולוגיות. גישה הוליסטית ומדויקת לבריאות האישה.</div>
-        <div class="article-card-link">קראו עוד ←</div>
-      </div>
-    </a>
+      <a href="treatment-stress.html" class="alp-card" data-category="סטרס" role="listitem">
+        <div class="alp-card-img-wrap">
+          <img src="images/clinic/treatment-stress-hero.jpg" alt="סטרס, חרדה וטיפול ברפואה סינית" class="alp-card-img" loading="lazy">
+        </div>
+        <div class="alp-card-body">
+          <div class="alp-card-meta">
+            <span class="alp-card-cat">סטרס וחרדה</span>
+            <span class="alp-card-time" aria-label="זמן קריאה משוער">4 דק׳</span>
+          </div>
+          <h3 class="alp-card-title">סטרס, חרדה ורפואה סינית</h3>
+          <p class="alp-card-excerpt">לחץ כרוני, חרדה, עצבנות — כשהגוף נשאר תקוע במצב "כוננות". הרפואה הסינית מטפלת בשורש, לא בסימפטום.</p>
+          <span class="alp-card-link" aria-hidden="true">קראו עוד ←</span>
+        </div>
+      </a>
+
+      <a href="article-sleep.html" class="alp-card" data-category="שינה" role="listitem">
+        <div class="alp-card-img-wrap">
+          <img src="images/articles/article-sleep.png" alt="בעיות שינה וטיפול בדיקור" class="alp-card-img" loading="lazy">
+        </div>
+        <div class="alp-card-body">
+          <div class="alp-card-meta">
+            <span class="alp-card-cat">שינה ומנוחה</span>
+            <span class="alp-card-time" aria-label="זמן קריאה משוער">5 דק׳</span>
+          </div>
+          <h3 class="alp-card-title">למה יש לנו בעיות שינה?</h3>
+          <p class="alp-card-excerpt">לא מצליחים להירדם? מתעוררים באמצע הלילה? שליש מחיינו עוברים בשינה — איכות השינה משפיעה על הכל.</p>
+          <span class="alp-card-link" aria-hidden="true">קראו עוד ←</span>
+        </div>
+      </a>
+
+      <a href="article-headache.html" class="alp-card" data-category="כאב" role="listitem">
+        <div class="alp-card-img-wrap">
+          <img src="images/articles/article-headache.png" alt="כאבי ראש ורפואה סינית" class="alp-card-img" loading="lazy">
+        </div>
+        <div class="alp-card-body">
+          <div class="alp-card-meta">
+            <span class="alp-card-cat">כאב וניהולו</span>
+            <span class="alp-card-time" aria-label="זמן קריאה משוער">6 דק׳</span>
+          </div>
+          <h3 class="alp-card-title">כל מה שרצית לדעת על כאב ראש</h3>
+          <p class="alp-card-excerpt">מסתובבים כבר כמה ימים עם כאב ראש מטריד שלא נותן מנוח? גלו איך הרפואה הסינית מבינה ומטפלת בכאבי ראש.</p>
+          <span class="alp-card-link" aria-hidden="true">קראו עוד ←</span>
+        </div>
+      </a>
+
+      <a href="article-sweating.html" class="alp-card" data-category="בריאות" role="listitem">
+        <div class="alp-card-img-wrap">
+          <img src="images/articles/article-sweating.png" alt="הזעת יתר וטיפול טבעי" class="alp-card-img" loading="lazy">
+        </div>
+        <div class="alp-card-body">
+          <div class="alp-card-meta">
+            <span class="alp-card-cat">בריאות כללית</span>
+            <span class="alp-card-time" aria-label="זמן קריאה משוער">4 דק׳</span>
+          </div>
+          <h3 class="alp-card-title">סובלים מהזעת יתר?</h3>
+          <p class="alp-card-excerpt">הזעת יתר משפיעה על איכות החיים ועל הביטחון העצמי. הרפואה הסינית מציעה פתרון טבעי ויעיל.</p>
+          <span class="alp-card-link" aria-hidden="true">קראו עוד ←</span>
+        </div>
+      </a>
+
+      <a href="article-gynecology.html" class="alp-card" data-category="פוריות" role="listitem">
+        <div class="alp-card-img-wrap">
+          <img src="images/articles/article-gynecology.png" alt="בעיות גינקולוגיות ורפואה סינית" class="alp-card-img" loading="lazy">
+        </div>
+        <div class="alp-card-body">
+          <div class="alp-card-meta">
+            <span class="alp-card-cat">פוריות ובריאות האישה</span>
+            <span class="alp-card-time" aria-label="זמן קריאה משוער">5 דק׳</span>
+          </div>
+          <h3 class="alp-card-title">בעיות גינקולוגיות ורפואה סינית</h3>
+          <p class="alp-card-excerpt">יותר ויותר נשים פונות לרפואה סינית לטיפול בבעיות גינקולוגיות. גישה הוליסטית ומדויקת לבריאות האישה.</p>
+          <span class="alp-card-link" aria-hidden="true">קראו עוד ←</span>
+        </div>
+      </a>
+
+    </div>
 
   </div>
 </div>
+
+
+<!-- ════════════════════════════════════════
+     INLINE CTA BANNER
+════════════════════════════════════════ -->
+<section class="alp-cta-banner" aria-label="קריאה לפעולה">
+  <div class="alp-cta-banner-inner">
+    <div class="alp-cta-banner-text">
+      <p class="alp-cta-banner-title">יש לכם שאלה אחרי קריאת המאמר?</p>
+      <p class="alp-cta-banner-sub">רון מגיב אישית בוואטסאפ — בלי התחייבות, בלי טפסים.</p>
+    </div>
+    <a href="https://wa.me/972523518103?text=%D7%94%D7%99%D7%99%2C%20%D7%94%D7%92%D7%A2%D7%AA%D7%99%20%D7%93%D7%A8%D7%9A%20%D7%94%D7%90%D7%AA%D7%A8%2C%20%D7%90%D7%A9%D7%9E%D7%97%20%D7%9C%D7%A4%D7%A8%D7%98%D7%99%D7%9D%20%D7%A0%D7%95%D7%A1%D7%A4%D7%99%D7%9D"
+       class="alp-cta-banner-btn" target="_blank" rel="noopener noreferrer">
+      💬 שאלו אותי ישירות
+    </a>
+  </div>
+</section>
 
 <!-- ════════════════════════════════════════
      10. CONTACT INFO CARDS
